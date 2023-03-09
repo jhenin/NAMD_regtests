@@ -1,0 +1,33 @@
+#!/bin/bash
+
+
+get_spiff() {
+    if hash spiff >& /dev/null ; then
+        hash -t spiff
+    else
+        local SPIFFDIR=""
+        if [ -d "${1}" ] ; then
+            SPIFFDIR="${1}"
+        else
+            SPIFFDIR=$(dirname $0)/spiff
+        fi
+        if [ ! -d "${SPIFFDIR}" ] ; then
+            git clone --quiet --depth 1 https://github.com/jhenin/spiff.git "${SPIFFDIR}"
+        fi
+        if [ ! -x "${SPIFFDIR}"/spiff ] ; then
+            if pushd "${SPIFFDIR}" > /dev/null ; then
+                make > /dev/null
+                popd > /dev/null
+            fi
+        fi
+        if [ -x "${SPIFFDIR}"/spiff ] ; then
+            echo "${SPIFFDIR}"/spiff
+            return 0
+        else
+            return 1
+        fi
+    fi
+}
+
+
+get_spiff "${@}"
