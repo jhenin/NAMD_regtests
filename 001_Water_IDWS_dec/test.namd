@@ -104,13 +104,9 @@ alchVdwLambdaEnd        0.5
 alchElecLambdaStart     0.5
 alchVdWShiftCoeff       6.0
 
-set nSteps 10000
-set IDWS 1
-
 alchLambda 0.1
 alchLambda2 0.15
 alchLambdaIDWS 0.05
 
 run 20
-#runFEP 0 1 0.02 $nSteps $IDWS
 
