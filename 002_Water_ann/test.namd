@@ -1,0 +1,110 @@
+# FILENAMES
+set common "../Common"
+set outName             [file rootname [file tail [info script]]]
+set inName              $common/equil
+
+#cudasoaIntegrate on
+
+# MD SETUP
+timestep          1.0
+numSteps		  100
+
+seed 1
+
+# INPUT
+structure               $common/solvate.psf 
+parameters              $common/par_all22_prot.inp
+#parameters              missing.par
+paraTypeCharmm          on
+coordinates             $common/solvate.pdb
+
+set temp 300
+#temperature 300
+extendedSystem      $inName.xsc
+bincoordinates       $inName.coor
+binvelocities        $inName.vel
+
+# OUTPUT
+
+outputname              ${outName}
+outputenergies          1000
+outputtiming            20000
+binaryoutput            yes
+#restartname             ${outName}_r
+#restartfreq             1000
+# binaryrestart           yes
+
+
+# DCD TRAJECTORY
+
+DCDfile                 ${outName}.dcd
+DCDfreq                 1000
+DCDunitcell yes
+
+
+# CONSTANT-T
+langevin                on
+langevinTemp		    $temp
+langevinDamping         1.0
+langevinHydrogen	    off
+
+langevinPiston        on
+langevinPistonTarget  1.
+langevinPistonPeriod  200.0
+langevinPistonDecay   100.0
+langevinPistonTemp    $temp
+
+
+# SPACE PARTITIONING
+splitpatch              hydrogen
+hgroupcutoff            2.8
+stepspercycle           20
+margin                  4
+
+# CUT-OFFS
+switching               on
+switchdist              9.0
+cutoff                  11.0
+pairlistdist            12.0
+
+PME yes
+PMETolerance       10e-6
+PMEInterpOrder     4
+PMEGridSpacing     1.0
+
+
+# RESPA 
+fullElectFrequency      4
+nonbondedFreq           2
+
+# 1-4 NON-BONDED
+exclude                 scaled1-4
+1-4scaling              1.0
+
+# COM
+commotion               no
+
+# SHAKE
+rigidBonds              all
+
+
+# FEP PARAMETERS
+
+alch                    on 
+alchType                FEP
+alchFile                $common/solvate.pdb
+alchCol                 B
+alchOutFile             ${outName}.fepout
+
+alchOutFreq            4
+alchEquilSteps         1000
+
+alchVdwLambdaEnd        0.5
+alchElecLambdaStart     0.5
+alchVdWShiftCoeff       6.0
+
+alchLambda 0.1
+alchLambda2 0.15
+
+run 20
+

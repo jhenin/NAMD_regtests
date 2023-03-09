@@ -6,17 +6,7 @@ Warning> Randomization of virtual memory (ASLR) is turned on in the kernel, thre
 CharmLB> Load balancer assumes all CPUs are same.
 Charm++> Running on 1 hosts (2 sockets x 10 cores x 1 PUs = 20-way SMP)
 Charm++> cpu topology info is gathered in 0.001 seconds.
-Info: Built with CUDA version 11080
-Did not find +devices i,j,k,... argument, using all
-Pe 0 physical rank 0 will use CUDA device of pe 4
-Pe 2 physical rank 2 will use CUDA device of pe 4
-Pe 6 physical rank 6 will use CUDA device of pe 4
-Pe 3 physical rank 3 will use CUDA device of pe 4
-Pe 1 physical rank 1 will use CUDA device of pe 4
-Pe 5 physical rank 5 will use CUDA device of pe 4
-Pe 7 physical rank 7 will use CUDA device of pe 4
-Pe 4 physical rank 4 binding to CUDA device 0 on eurus.lbt.ibpc.fr: 'NVIDIA GeForce GTX 1080'  Mem: 8097MB  Rev: 6.1  PCI: 0:3:0
-Info: NAMD 3.0alpha13 for Linux-x86_64-multicore-CUDA
+Info: NAMD 2.15alpha2 for Linux-x86_64-multicore
 Info: 
 Info: Please visit http://www.ks.uiuc.edu/Research/namd/
 Info: for updates, documentation, and support information.
@@ -25,24 +15,17 @@ Info: Please cite Phillips et al., J. Chem. Phys. 153:044130 (2020) doi:10.1063/
 Info: in all publications reporting results obtained with NAMD.
 Info: 
 Info: Based on Charm++/Converse 61000 for multicore-linux-x86_64
-Info: Built Thu Mar 9 10:45:06 CET 2023 by jhenin on eurus.lbt.ibpc.fr
-Info: 1 NAMD  3.0alpha13  Linux-x86_64-multicore-CUDA  8    eurus.lbt.ibpc.fr  jhenin
+Info: Built Wed Mar 1 15:12:28 CET 2023 by jhenin on eurus.lbt.ibpc.fr
+Info: 1 NAMD  2.15alpha2  Linux-x86_64-multicore  8    eurus.lbt.ibpc.fr  jhenin
 Info: Running on 8 processors, 1 nodes, 1 physical nodes.
 Info: CPU topology information available.
-Info: Charm++/Converse parallel runtime startup completed at 0.261092 s
-Info: 0 MB of memory in use based on /proc/self/stat
-Info: Using bitfields in atom data structures.
-Info:   sizeof( CompAtom )    = 32
-Info:   sizeof( CompAtomExt ) = 8
+Info: Charm++/Converse parallel runtime startup completed at 0.00362202 s
 CkLoopLib is used in SMP with simple dynamic scheduling (converse-level notification)
+Info: 559.77 MB of memory in use based on /proc/self/stat
 Info: Configuration file is test.namd
-Info: Working in the current directory /data/jhenin/Projects/NAMD_regtests/000_Water_IDWS_ann
+Info: Working in the current directory /data/jhenin/Projects/NAMD_regtests/003_Water_dec
 TCL: Suspending until startup complete.
 Info: EXTENDED SYSTEM FILE   ../Common/equil.xsc
-Warning: The Langevin gamma parameters differ over the particles,
-Warning: requiring extra work per step to constrain rigid bonds.
-Warning: alchOutFreq and outputEnergies do not match. IDWS ouput to stdout may not be useful!
-Warning: Always using force tables for CUDA nonbonded kernel due to unsupported config parameters.
 Info: SIMULATION PARAMETERS:
 Info: TIMESTEP               1
 Info: NUMBER OF STEPS        100
@@ -59,7 +42,6 @@ Info: LAST LDB TIMESTEP     -1
 Info: LDB BACKGROUND SCALING 1
 Info: HOM BACKGROUND SCALING 1
 Info: PME BACKGROUND SCALING 1
-Warning: CkNumPes is 8
 Info: MIN ATOMS PER PATCH    40
 Info: EMPTY PATCH LOAD       40 ATOMS
 Info: VELOCITY FILE          ../Common/equil.vel
@@ -91,17 +73,13 @@ Info: MARGIN                 4
 Info: HYDROGEN GROUP CUTOFF  2.8
 Info: PATCH DIMENSION        18.8
 Info: ENERGY OUTPUT STEPS    1000
-Warning: The period of outputting energies relating to alchemical transformations (alchOutFreq = 4) is not a multiple of the period of computing energies (computeEnergies = 1000). If alchOutFreq is smaller than outputEnergies and computeEnergies is not defined, a better solution is to set computeEnergies explicitly and keep it the same as alchOutFreq. The simulation will use the greatest common divisor of computeEnergies and alchOutFreq as the period of energy evaluation.
-Info: ENERGY EVALUATION STEPS    1000
-Info: OUTPUT ENERGY PRECISION 4
 Info: OUPUT ENERGY PRECISION 4
 Info: CROSSTERM ENERGY INCLUDED IN DIHEDRAL
 Info: TIMING OUTPUT STEPS    20000
 Info: ALCHEMICAL FEP ON
 Info: FEP CURRENT LAMBDA VALUE     0.1
 Info: FEP COMPARISON LAMBDA VALUE  0.15
-Info: FEP ALTERNATE COMPARISON LAMBDA VALUE  0.05
-Info: FEP INTRA-ALCHEMICAL NON-BONDED INTERACTIONS WILL BE DECOUPLED
+Info: FEP INTRA-ALCHEMICAL NON-BONDED INTERACTIONS WILL BE RETAINED
 Info: FEP INTRA-ALCHEMICAL BONDED INTERACTIONS WILL BE RETAINED
 Info: FEP VDW SHIFTING COEFFICIENT 6
 Info: FEP ELEC. ACTIVE FOR ANNIHILATED PARTICLES BETWEEN LAMBDA = 0 AND LAMBDA = 0.5
@@ -130,9 +108,9 @@ Info: PME EWALD COEFFICIENT       0.248606
 Info: PME INTERPOLATION ORDER     4
 Info: PME GRID DIMENSIONS         24 24 24
 Info: PME MAXIMUM GRID SPACING    1
-Info: Attempting to read FFTW data from FFTW_NAMD_3.0alpha13_Linux-x86_64-multicore-CUDA.txt
+Info: Attempting to read FFTW data from FFTW_NAMD_2.15alpha2_Linux-x86_64-multicore.txt
 Info: Optimizing 6 FFT steps.  1... 2... 3... 4... 5... 6...   Done.
-Info: Writing FFTW data to FFTW_NAMD_3.0alpha13_Linux-x86_64-multicore-CUDA.txt
+Info: Writing FFTW data to FFTW_NAMD_2.15alpha2_Linux-x86_64-multicore.txt
 Info: FULL ELECTROSTATIC EVALUATION FREQUENCY      4
 Info: USING VERLET I (r-RESPA) MTS SCHEME.
 Info: C1 SPLITTING OF LONG RANGE ELECTROSTATICS
@@ -159,9 +137,9 @@ Info: 6 CROSSTERM
 Info: 95 VDW
 Info: 0 VDW_PAIRS
 Info: 0 NBTHOLE_PAIRS
-Info: TIME FOR READING PSF FILE: 0.00351172
+Info: TIME FOR READING PSF FILE: 0.00318306
 Info: Reading pdb file ../Common/solvate.pdb
-Info: TIME FOR READING PDB FILE: 0.00122955
+Info: TIME FOR READING PDB FILE: 0.00113432
 Info: 
 Info: To read alchdata from file: ../Common/solvate.pdb
 Info: To read alchflag data from column: 5
@@ -189,10 +167,10 @@ Info: ATOM DENSITY = 0.0996284 atoms/A^3
 Info: *****************************
 Info: Reading from binary file ../Common/equil.coor
 Info: 
-Info: Entering startup at 0.280188 s, 0 MB of memory in use
-Info: Startup phase 0 took 4.9278e-05 s, 0 MB of memory in use
+Info: Entering startup at 0.0213264 s, 776.73 MB of memory in use
+Info: Startup phase 0 took 6.5347e-05 s, 776.73 MB of memory in use
 Info: ADDED 906 IMPLICIT EXCLUSIONS
-Info: Startup phase 1 took 0.00100058 s, 0 MB of memory in use
+Info: Startup phase 1 took 0.000972079 s, 776.859 MB of memory in use
 Info: NONBONDED TABLE R-SQUARED SPACING: 0.0625
 Info: NONBONDED TABLE SIZE: 705 POINTS
 Info: INCONSISTENCY IN FAST TABLE ENERGY VS FORCE: 0.000290478 AT 0.251946
@@ -201,63 +179,63 @@ Info: INCONSISTENCY IN VDWA TABLE ENERGY VS FORCE: 0.0040507 AT 0.251946
 Info: ABSOLUTE IMPRECISION IN VDWB TABLE ENERGY: 1.03398e-25 AT 10.9972
 Info: RELATIVE IMPRECISION IN VDWB TABLE ENERGY: 1.12007e-16 AT 10.9972
 Info: INCONSISTENCY IN VDWB TABLE ENERGY VS FORCE: 0.00150189 AT 0.251946
-Info: Startup phase 2 took 0.000624156 s, 0 MB of memory in use
-Info: Startup phase 3 took 4.0657e-05 s, 0 MB of memory in use
-Info: Startup phase 4 took 4.8732e-05 s, 0 MB of memory in use
-Info: Startup phase 5 took 3.7994e-05 s, 0 MB of memory in use
-Info: PATCH GRID IS 2 (PERIODIC) BY 2 (PERIODIC) BY 2 (PERIODIC)
-Info: PATCH GRID IS 2-AWAY BY 2-AWAY BY 2-AWAY
+Info: Startup phase 2 took 0.000709143 s, 777.5 MB of memory in use
+Info: Startup phase 3 took 5.4225e-05 s, 777.5 MB of memory in use
+Info: Startup phase 4 took 0.000193901 s, 777.5 MB of memory in use
+Info: Startup phase 5 took 5.1078e-05 s, 777.5 MB of memory in use
+Info: PATCH GRID IS 2 (PERIODIC) BY 2 (PERIODIC) BY 1 (PERIODIC)
+Info: PATCH GRID IS 2-AWAY BY 2-AWAY BY 1-AWAY
 Info: Reading from binary file ../Common/equil.vel
 Info: REMOVING COM VELOCITY -0.348295 -0.19195 0.0684543
-Info: LARGEST PATCH (5) HAS 129 ATOMS
+Info: LARGEST PATCH (1) HAS 237 ATOMS
 Info: TORUS A SIZE 1 USING 0
 Info: TORUS B SIZE 1 USING 0
 Info: TORUS C SIZE 1 USING 0
 Info: TORUS MINIMAL MESH SIZE IS 1 BY 1 BY 1
 Info: Placed 100% of base nodes on same physical node as patch
-Info: Startup phase 6 took 0.000404101 s, 0 MB of memory in use
-Info: Use 3D box decompostion in PME FFT.
-Info: PME using 1 x 1 x 1 pencil grid for FFT and reciprocal sum.
-Info: Startup phase 7 took 9.8814e-05 s, 0 MB of memory in use
-Info: Updated CUDA force table with 4096 elements.
-Info: Updated CUDA LJ table with 95 x 95 elements.
-Info: Startup phase 8 took 0.00192565 s, 0 MB of memory in use
-Info: Startup phase 9 took 5.5042e-05 s, 0 MB of memory in use
-Info: Startup phase 10 took 3.8947e-05 s, 0 MB of memory in use
-Info: Startup phase 11 took 0.000340371 s, 0 MB of memory in use
+Info: Startup phase 6 took 0.000380523 s, 777.637 MB of memory in use
+Info: PME using 8 and 8 processors for FFT and reciprocal sum.
+Info: PME GRID LOCATIONS: 0 1 2 3 4 5 6 7
+Info: PME TRANS LOCATIONS: 0 1 2 3 4 5 6 7
+Info: PME USING 1 GRID NODES AND 1 TRANS NODES
+Info: Optimizing 4 FFT steps.  1... 2... 3... 4...   Done.
+Info: Startup phase 7 took 0.000254854 s, 777.789 MB of memory in use
+Info: Startup phase 8 took 5.2287e-05 s, 777.789 MB of memory in use
+Info: Startup phase 9 took 4.4219e-05 s, 777.789 MB of memory in use
+Info: Startup phase 10 took 4.2371e-05 s, 777.789 MB of memory in use
+Info: Startup phase 11 took 7.424e-05 s, 777.789 MB of memory in use
 LDB: Central LB being created...
-Info: Startup phase 12 took 0.00694717 s, 0 MB of memory in use
-Info: CREATING 624 COMPUTE OBJECTS
-Info: Found 3 unique exclusion lists needing 4 bytes
+Info: Startup phase 12 took 6.1459e-05 s, 777.789 MB of memory in use
+Info: CREATING 196 COMPUTE OBJECTS
 Info: useSync: 0 useProxySync: 0
-Info: Startup phase 13 took 0.00191304 s, 0 MB of memory in use
-Info: Startup phase 14 took 5.6744e-05 s, 0 MB of memory in use
-Info: Startup phase 15 took 6.5984e-05 s, 0 MB of memory in use
-Info: Finished startup at 0.293835 s, 0 MB of memory in use
+Info: Startup phase 13 took 0.000749831 s, 777.789 MB of memory in use
+Info: Startup phase 14 took 5.8959e-05 s, 777.789 MB of memory in use
+Info: Startup phase 15 took 4.4885e-05 s, 777.953 MB of memory in use
+Info: Finished startup at 0.0251358 s, 777.953 MB of memory in use
 
 TCL: Original numsteps 100 will be ignored.
 TCL: Running for 20 steps
-FEP: RESETTING FOR NEW FEP WINDOW LAMBDA SET TO 0.1 LAMBDA2 0.15 LAMBDA_IDWS 0.05
+FEP: RESETTING FOR NEW FEP WINDOW LAMBDA SET TO 0.1 LAMBDA2 0.15
 FEP: WINDOW TO HAVE 1000 STEPS OF EQUILIBRATION PRIOR TO FEP DATA COLLECTION.
 FEP: USING CONSTANT TEMPERATURE OF 300 K FOR FEP CALCULATION
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 FEPTITLE:    TS          BOND2         ELECT2           VDW2
 
-ENERGY:       0         0.0000         0.0000         0.0000         0.0000          -3270.0577       328.3905         0.0000         0.0000       573.0580          -2368.6092       318.2957     -2941.6672     -2367.5526       318.2957         -20784.7620       332.5599      9093.7916    -20784.7620       332.5599
-FEP:          0         0.0000     -3271.8689       328.3905
+ENERGY:       0         0.0000         0.0000         0.0000         0.0000          -3270.0659       328.3840         0.0000         0.0000       573.0580          -2368.6239       318.2957     -2941.6819     -2367.5673       318.2957         -20785.2685       332.1672      9093.7916    -20785.2685       332.1672
+FEP:          0         0.0000     -3268.2562       328.3840
 
 OPENING FEP ENERGY OUTPUT FILE
-LDB: ============= START OF LOAD BALANCING ============== 0.302386
-LDB: ============== END OF LOAD BALANCING =============== 0.302412
+LDB: ============= START OF LOAD BALANCING ============== 0.0538626
+LDB: ============== END OF LOAD BALANCING =============== 0.0538885
 Info: useSync: 0 useProxySync: 0
-LDB: =============== DONE WITH MIGRATION ================ 0.302455
+LDB: =============== DONE WITH MIGRATION ================ 0.0539314
 WRITING EXTENDED SYSTEM TO OUTPUT FILE AT STEP 20
 WRITING COORDINATES TO OUTPUT FILE AT STEP 20
 COORDINATE DCD FILE test.dcd WAS NOT CREATED
-The last position output (seq=-2) takes 0.000 seconds, 0.000 MB of memory in use
+The last position output (seq=-2) takes 0.000 seconds, 777.953 MB of memory in use
 WRITING VELOCITIES TO OUTPUT FILE AT STEP 20
-The last velocity output (seq=-2) takes 0.000 seconds, 0.000 MB of memory in use
+The last velocity output (seq=-2) takes 0.000 seconds, 777.953 MB of memory in use
 ====================================================
 
-WallClock: 0.302662  CPUTime: 0.283504  Memory: 0.000000 MB
+WallClock: 0.057334  CPUTime: 0.055851  Memory: 777.953125 MB
 [Partition 0][Node 0] End of program

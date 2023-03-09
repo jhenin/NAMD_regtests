@@ -193,7 +193,7 @@ for dir in ${DIRLIST} ; do
     then
       if [ ${base} != ${base%.log} ]
       then
-        echo "(warning: differences in log file $base) "
+        echo -n "(warning: differences in log file $base) "
       else
         echo -e "\n*** Failure for file $(${TPUT_RED})$base$(${TPUT_CLEAR}): see `pwd`/$base.diff "
         SUCCESS=0
@@ -214,6 +214,8 @@ for dir in ${DIRLIST} ; do
           failed_tests+=($dir)
           echo " --> Fails at minimum tested precision 1e-${LOW_PREC}"
         fi
+        # End line for failed file
+        echo ""
       fi
     fi
   done
