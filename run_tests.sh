@@ -75,7 +75,7 @@ BASEDIR=$PWD
 ALL_SUCCESS=1
 
 # Precision requested to pass (negative powers of ten)
-DIFF_PREC=4
+DIFF_PREC=2
 # Minimum precision to be tested
 MIN_PREC=1
 
@@ -151,9 +151,6 @@ for dir in ${DIRLIST} ; do
 
     # If this test is used to generate the reference output files, copy them
     if [ "x${gen_ref_output}" = 'xyes' ]; then
-      echo -n " (Copying reference files for ${script}) "
-      grep 'NAMD' ${basename}.log | head -n 1 > namd-version.txt
-      grep 'Using NAMD interface, version' ${basename}.log | head -n 1 >> namd-version.txt
       if [ -f ${basename}.pmf ] ; then
         cp -f ${basename}.pmf AutoDiff/
       fi

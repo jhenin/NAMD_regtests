@@ -43,16 +43,10 @@ DCDunitcell yes
 
 
 # CONSTANT-T
-langevin                on
-langevinTemp		    $temp
-langevinDamping         1.0
-langevinHydrogen	    off
-
-langevinPiston        on
-langevinPistonTarget  1.
-langevinPistonPeriod  200.0
-langevinPistonDecay   100.0
-langevinPistonTemp    $temp
+stochRescale on
+stochRescaleTemp 300
+stochRescalePeriod 2
+stochRescaleFreq 100
 
 
 # SPACE PARTITIONING

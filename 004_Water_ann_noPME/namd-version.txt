@@ -1,1 +1,0 @@
-Info: NAMD 2.15alpha2 for Linux-x86_64-multicore
