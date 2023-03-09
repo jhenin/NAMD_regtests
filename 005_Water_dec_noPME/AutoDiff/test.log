@@ -1,0 +1,224 @@
+Charm++: standalone mode (not using charmrun)
+Charm++> Running in Multicore mode: 8 threads (PEs)
+Charm++> Using recursive bisection (scheme 3) for topology aware partitions
+Converse/Charm++ Commit ID: v6.10.0
+Warning> Randomization of virtual memory (ASLR) is turned on in the kernel, thread migration may not work! Run 'echo 0 > /proc/sys/kernel/randomize_va_space' as root to disable it, or try running with '+isomalloc_sync'.
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 1 hosts (2 sockets x 10 cores x 1 PUs = 20-way SMP)
+Charm++> cpu topology info is gathered in 0.001 seconds.
+Info: NAMD 2.15alpha2 for Linux-x86_64-multicore
+Info: 
+Info: Please visit http://www.ks.uiuc.edu/Research/namd/
+Info: for updates, documentation, and support information.
+Info: 
+Info: Please cite Phillips et al., J. Chem. Phys. 153:044130 (2020) doi:10.1063/5.0014475
+Info: in all publications reporting results obtained with NAMD.
+Info: 
+Info: Based on Charm++/Converse 61000 for multicore-linux-x86_64
+Info: Built Wed Mar 1 15:12:28 CET 2023 by jhenin on eurus.lbt.ibpc.fr
+Info: 1 NAMD  2.15alpha2  Linux-x86_64-multicore  8    eurus.lbt.ibpc.fr  jhenin
+Info: Running on 8 processors, 1 nodes, 1 physical nodes.
+Info: CPU topology information available.
+Info: Charm++/Converse parallel runtime startup completed at 0.00389623 s
+CkLoopLib is used in SMP with simple dynamic scheduling (converse-level notification)
+Info: 559.77 MB of memory in use based on /proc/self/stat
+Info: Configuration file is test.namd
+Info: Working in the current directory /data/jhenin/Projects/NAMD_regtests/005_Water_dec_noPME
+TCL: Suspending until startup complete.
+Info: EXTENDED SYSTEM FILE   ../Common/equil.xsc
+Info: SIMULATION PARAMETERS:
+Info: TIMESTEP               1
+Info: NUMBER OF STEPS        100
+Info: STEPS PER CYCLE        20
+Info: PERIODIC CELL BASIS 1  20.8728 0 0
+Info: PERIODIC CELL BASIS 2  0 20.8728 0
+Info: PERIODIC CELL BASIS 3  0 0 20.8728
+Info: PERIODIC CELL CENTER   0 0 0
+Info: LOAD BALANCER  Centralized
+Info: LOAD BALANCING STRATEGY  New Load Balancers -- DEFAULT
+Info: LDB PERIOD             4000 steps
+Info: FIRST LDB TIMESTEP     100
+Info: LAST LDB TIMESTEP     -1
+Info: LDB BACKGROUND SCALING 1
+Info: HOM BACKGROUND SCALING 1
+Info: MIN ATOMS PER PATCH    40
+Info: EMPTY PATCH LOAD       40 ATOMS
+Info: VELOCITY FILE          ../Common/equil.vel
+Info: CENTER OF MASS MOVING INITIALLY? NO
+Info: DIELECTRIC             1
+Info: EXCLUDE                SCALED ONE-FOUR
+Info: 1-4 ELECTROSTATICS SCALED BY 1
+Info: MODIFIED 1-4 VDW PARAMETERS WILL BE USED
+Info: DCD FILENAME           test.dcd
+Info: DCD FREQUENCY          1000
+Info: DCD FIRST STEP         1000
+Info: DCD FILE WILL CONTAIN UNIT CELL DATA
+Info: NO EXTENDED SYSTEM TRAJECTORY OUTPUT
+Info: NO VELOCITY DCD OUTPUT
+Info: NO FORCE DCD OUTPUT
+Info: OUTPUT FILENAME        test
+Info: BINARY OUTPUT FILES WILL BE USED
+Info: NO RESTART FILE
+Info: SWITCHING ACTIVE
+Info: SWITCHING ON           9
+Info: SWITCHING OFF          11
+Info: PAIRLIST DISTANCE      12
+Info: PAIRLIST SHRINK RATE   0.01
+Info: PAIRLIST GROW RATE     0.01
+Info: PAIRLIST TRIGGER       0.3
+Info: PAIRLISTS PER CYCLE    2
+Info: PAIRLISTS ENABLED
+Info: MARGIN                 4
+Info: HYDROGEN GROUP CUTOFF  2.8
+Info: PATCH DIMENSION        18.8
+Info: ENERGY OUTPUT STEPS    1000
+Info: OUPUT ENERGY PRECISION 4
+Info: CROSSTERM ENERGY INCLUDED IN DIHEDRAL
+Info: TIMING OUTPUT STEPS    20000
+Info: ALCHEMICAL FEP ON
+Info: FEP CURRENT LAMBDA VALUE     0.1
+Info: FEP COMPARISON LAMBDA VALUE  0.15
+Info: FEP INTRA-ALCHEMICAL NON-BONDED INTERACTIONS WILL BE RETAINED
+Info: FEP INTRA-ALCHEMICAL BONDED INTERACTIONS WILL BE RETAINED
+Info: FEP VDW SHIFTING COEFFICIENT 6
+Info: FEP ELEC. ACTIVE FOR ANNIHILATED PARTICLES BETWEEN LAMBDA = 0 AND LAMBDA = 0.5
+Info: FEP ELEC. ACTIVE FOR EXNIHILATED PARTICLES BETWEEN LAMBDA = 0.5 AND LAMBDA = 1
+Info: FEP VDW ACTIVE FOR ANNIHILATED PARTICLES BETWEEN LAMBDA = 0.5 AND LAMBDA = 1
+Info: FEP VDW ACTIVE FOR EXNIHILATED PARTICLES BETWEEN LAMBDA = 0 AND LAMBDA = 0.5
+Info: FEP BOND ACTIVE FOR ANNIHILATED PARTICLES BETWEEN LAMBDA = 1 AND LAMBDA = 1
+Info: FEP BOND ACTIVE FOR EXNIHILATED PARTICLES BETWEEN LAMBDA = 0 AND LAMBDA = 0
+Info: LANGEVIN DYNAMICS ACTIVE
+Info: LANGEVIN TEMPERATURE   300
+Info: LANGEVIN USING BBK INTEGRATOR
+Info: LANGEVIN DAMPING COEFFICIENT IS 1 INVERSE PS
+Info: LANGEVIN DYNAMICS NOT APPLIED TO HYDROGENS
+Warning: Option useGroupPressure is being enabled due to pressure control with rigidBonds.
+Info: LANGEVIN PISTON PRESSURE CONTROL ACTIVE
+Info:        TARGET PRESSURE IS 1 BAR
+Info:     OSCILLATION PERIOD IS 200 FS
+Info:             DECAY TIME IS 100 FS
+Info:     PISTON TEMPERATURE IS 300 K
+Info:       PRESSURE CONTROL IS GROUP-BASED
+Info:    INITIAL STRAIN RATE IS -0.000108807 -0.000108807 -0.000108807
+Info:       CELL FLUCTUATION IS ISOTROPIC
+Info: USING VERLET I (r-RESPA) MTS SCHEME.
+Info: C1 SPLITTING OF LONG RANGE ELECTROSTATICS
+Info: PLACING ATOMS IN PATCHES BY HYDROGEN GROUPS
+Info: RIGID BONDS TO HYDROGEN : ALL
+Info:         ERROR TOLERANCE : 1e-08
+Info:          MAX ITERATIONS : 100
+Info: RIGID WATER USING SETTLE ALGORITHM
+Info: NONBONDED FORCES EVALUATED EVERY 2 STEPS
+Info: RANDOM NUMBER SEED     1
+Info: USE HYDROGEN BONDS?    NO
+Info: COORDINATE PDB         ../Common/solvate.pdb
+Info: STRUCTURE FILE         ../Common/solvate.psf
+Info: PARAMETER file: CHARMM format! 
+Info: PARAMETERS             ../Common/par_all22_prot.inp
+Info: USING ARITHMETIC MEAN TO COMBINE L-J SIGMA PARAMETERS
+Info: BINARY COORDINATES     ../Common/equil.coor
+Info: SUMMARY OF PARAMETERS:
+Info: 140 BONDS
+Info: 356 ANGLES
+Info: 459 DIHEDRAL
+Info: 43 IMPROPER
+Info: 6 CROSSTERM
+Info: 95 VDW
+Info: 0 VDW_PAIRS
+Info: 0 NBTHOLE_PAIRS
+Info: TIME FOR READING PSF FILE: 0.0032369
+Info: Reading pdb file ../Common/solvate.pdb
+Info: TIME FOR READING PDB FILE: 0.00121625
+Info: 
+Info: To read alchdata from file: ../Common/solvate.pdb
+Info: To read alchflag data from column: 5
+Info: ****************************
+Info: STRUCTURE SUMMARY:
+Info: 906 ATOMS
+Info: 604 BONDS
+Info: 302 ANGLES
+Info: 0 DIHEDRALS
+Info: 0 IMPROPERS
+Info: 0 CROSSTERMS
+Info: 0 EXCLUSIONS
+Info: 906 RIGID BONDS
+Info: ALCH: 3 ATOMS TO DISAPPEAR IN FINAL STATE
+Info: ALCH: 0 ATOMS TO APPEAR IN FINAL STATE
+Info: 1812 DEGREES OF FREEDOM
+Info: 302 HYDROGEN GROUPS
+Info: 3 ATOMS IN LARGEST HYDROGEN GROUP
+Info: 302 MIGRATION GROUPS
+Info: 3 ATOMS IN LARGEST MIGRATION GROUP
+Info: TOTAL MASS = 5440.65 amu
+Info: TOTAL CHARGE = 0 e
+Info: MASS DENSITY = 0.993494 g/cm^3
+Info: ATOM DENSITY = 0.0996284 atoms/A^3
+Info: *****************************
+Info: Reading from binary file ../Common/equil.coor
+Info: 
+Info: Entering startup at 0.0216749 s, 776.727 MB of memory in use
+Info: Startup phase 0 took 7.6474e-05 s, 776.727 MB of memory in use
+Info: ADDED 906 IMPLICIT EXCLUSIONS
+Info: Startup phase 1 took 0.00104506 s, 776.855 MB of memory in use
+Info: NONBONDED TABLE R-SQUARED SPACING: 0.0625
+Info: NONBONDED TABLE SIZE: 705 POINTS
+Info: INCONSISTENCY IN FAST TABLE ENERGY VS FORCE: 0.000290235 AT 0.251946
+Info: INCONSISTENCY IN VDWA TABLE ENERGY VS FORCE: 0.0040507 AT 0.251946
+Info: ABSOLUTE IMPRECISION IN VDWB TABLE ENERGY: 1.03398e-25 AT 10.9972
+Info: RELATIVE IMPRECISION IN VDWB TABLE ENERGY: 1.12007e-16 AT 10.9972
+Info: INCONSISTENCY IN VDWB TABLE ENERGY VS FORCE: 0.00150189 AT 0.251946
+Info: Startup phase 2 took 0.000722579 s, 777.496 MB of memory in use
+Info: Startup phase 3 took 5.7281e-05 s, 777.496 MB of memory in use
+Info: Startup phase 4 took 4.9693e-05 s, 777.496 MB of memory in use
+Info: Startup phase 5 took 4.6786e-05 s, 777.496 MB of memory in use
+Info: PATCH GRID IS 2 (PERIODIC) BY 2 (PERIODIC) BY 1 (PERIODIC)
+Info: PATCH GRID IS 2-AWAY BY 2-AWAY BY 1-AWAY
+Info: Reading from binary file ../Common/equil.vel
+Info: REMOVING COM VELOCITY -0.348295 -0.19195 0.0684543
+Info: LARGEST PATCH (1) HAS 237 ATOMS
+Info: TORUS A SIZE 1 USING 0
+Info: TORUS B SIZE 1 USING 0
+Info: TORUS C SIZE 1 USING 0
+Info: TORUS MINIMAL MESH SIZE IS 1 BY 1 BY 1
+Info: Placed 100% of base nodes on same physical node as patch
+Info: Startup phase 6 took 0.000368091 s, 777.633 MB of memory in use
+Info: Startup phase 7 took 5.7308e-05 s, 777.633 MB of memory in use
+Info: Startup phase 8 took 5.4592e-05 s, 777.633 MB of memory in use
+Info: Startup phase 9 took 4.7966e-05 s, 777.633 MB of memory in use
+Info: Startup phase 10 took 6.3391e-05 s, 777.633 MB of memory in use
+Info: Startup phase 11 took 7.7095e-05 s, 777.633 MB of memory in use
+LDB: Central LB being created...
+Info: Startup phase 12 took 6.2489e-05 s, 777.633 MB of memory in use
+Info: CREATING 192 COMPUTE OBJECTS
+Info: useSync: 0 useProxySync: 0
+Info: Startup phase 13 took 0.000589878 s, 777.633 MB of memory in use
+Info: Startup phase 14 took 6.5459e-05 s, 777.633 MB of memory in use
+Info: Startup phase 15 took 5.4871e-05 s, 777.844 MB of memory in use
+Info: Finished startup at 0.0251139 s, 777.844 MB of memory in use
+
+TCL: Original numsteps 100 will be ignored.
+TCL: Running for 20 steps
+FEP: RESETTING FOR NEW FEP WINDOW LAMBDA SET TO 0.1 LAMBDA2 0.15
+FEP: WINDOW TO HAVE 1000 STEPS OF EQUILIBRATION PRIOR TO FEP DATA COLLECTION.
+FEP: USING CONSTANT TEMPERATURE OF 300 K FOR FEP CALCULATION
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+FEPTITLE:    TS          BOND2         ELECT2           VDW2
+
+ENERGY:       0         0.0000         0.0000         0.0000         0.0000          -3403.3313       328.3840         0.0000         0.0000       573.0581          -2501.8891       318.2957     -3074.9472     -2500.7392       318.2957         -22783.5410      -968.2972      9093.7916    -22783.5410      -968.2972
+FEP:          0         0.0000     -3401.4559       328.3840
+
+OPENING FEP ENERGY OUTPUT FILE
+LDB: ============= START OF LOAD BALANCING ============== 0.0474053
+LDB: ============== END OF LOAD BALANCING =============== 0.0474437
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 0.047485
+WRITING EXTENDED SYSTEM TO OUTPUT FILE AT STEP 20
+WRITING COORDINATES TO OUTPUT FILE AT STEP 20
+COORDINATE DCD FILE test.dcd WAS NOT CREATED
+The last position output (seq=-2) takes 0.000 seconds, 777.844 MB of memory in use
+WRITING VELOCITIES TO OUTPUT FILE AT STEP 20
+The last velocity output (seq=-2) takes 0.000 seconds, 777.844 MB of memory in use
+====================================================
+
+WallClock: 0.049716  CPUTime: 0.048248  Memory: 777.843750 MB
+[Partition 0][Node 0] End of program
