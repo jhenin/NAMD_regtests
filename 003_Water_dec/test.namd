@@ -65,7 +65,8 @@ PME yes
 PMETolerance       10e-6
 PMEInterpOrder     4
 PMEGridSpacing     1.0
-
+FFTWEstimate   yes
+FFTWUseWisdom  no
 
 # RESPA 
 fullElectFrequency      4
