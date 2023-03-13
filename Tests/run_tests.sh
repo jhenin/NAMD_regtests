@@ -51,7 +51,7 @@ else
 fi
 
 if ! { echo ${DIRLIST} | grep -q 0 ; } then
-  DIRLIST=`eval ls -d [0-9][0-9][0-9]_*`
+  DIRLIST=`eval ls -d T_*`
 fi
 
 NUM_THREADS=8
