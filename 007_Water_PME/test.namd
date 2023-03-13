@@ -82,25 +82,5 @@ commotion               no
 # SHAKE
 rigidBonds              all
 
-
-# FEP PARAMETERS
-
-alch                    on 
-alchType                FEP
-alchFile                $common/solvate.pdb
-alchCol                 B
-alchOutFile             ${outName}.fepout
-alchDecouple           yes
-
-alchOutFreq            4
-alchEquilSteps         1000
-
-alchVdwLambdaEnd        0.5
-alchElecLambdaStart     0.5
-alchVdWShiftCoeff       6.0
-
-alchLambda 0.1
-alchLambda2 0.15
-
 run 20
 

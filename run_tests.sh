@@ -83,7 +83,7 @@ cleanup_files() {
   for script in test*.namd testres*.namd ; do
     for f in ${script%.namd}.*diff; do if [ ! -s $f ]; then rm -f $f; fi; done # remove empty diffs only
     rm -f ${script%.namd}.*{BAK,old,backup}
-    for f in ${script%.namd}.*{state,state.stripped,log,traj,coor,vel,xsc,dcd,pmf,hills,grad,force,count,histogram?.dat,hist.dat,corrfunc.dat,histogram?.dx,count.dx,pmf.dx,output.dat,fepout}
+    for f in ${script%.namd}.*{state,state.stripped,log,traj,coor,vel,xsc,dcd,pmf,hills,grad,force,count,histogram?.dat,hist.dat,corrfunc.dat,histogram?.dx,count.dx,pmf.dx,output.dat,fepout,energy}
     do
       if [ ! -f "$f.diff" ]; then rm -f $f; fi # keep files that have a non-empty diff
     done
@@ -149,6 +149,9 @@ for dir in ${DIRLIST} ; do
     # Use multiple threads to test SMP code (TODO: move SMP tests to interface?)
     $BINARY +p ${NUM_THREADS} $script > ${basename}.log
 
+    # Extract energy lines for comparison
+    grep "^ENERGY:\|ETITLE:" ${basename}.log > ${basename}.energy
+
     # If this test is used to generate the reference output files, copy them
     if [ "x${gen_ref_output}" = 'xyes' ]; then
       if [ -f ${basename}.pmf ] ; then
@@ -157,6 +160,8 @@ for dir in ${DIRLIST} ; do
       if [ -f ${basename}.fepout ] ; then
         cp -f ${basename}.fepout AutoDiff/
       fi
+      cp -f ${basename}.log AutoDiff/
+      cp -f ${basename}.energy AutoDiff/
 
       # Update any additional files with current versions
       for file in AutoDiff/*; do
@@ -179,7 +184,7 @@ for dir in ${DIRLIST} ; do
     fi
 
     if [ ${base} != ${base%.log} ] ; then
-      # Lots of text confuse spiff
+      # Use plain diff for log file, as lots of text confuse spiff
       diff $f $base > "$base.diff"
       RETVAL=$?
     else

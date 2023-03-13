@@ -27,7 +27,7 @@ binvelocities        $inName.vel
 # OUTPUT
 
 outputname              ${outName}
-outputenergies          1000
+outputenergies          1
 outputtiming            20000
 binaryoutput            yes
 #restartname             ${outName}_r
