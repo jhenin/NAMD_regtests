@@ -101,7 +101,7 @@ for dir in ${DIRLIST} ; do
     continue
   fi
 
-  echo -ne "Entering $(${TPUT_BLUE})${dir}$(${TPUT_CLEAR}) ..."
+  echo -ne "\nEntering $(${TPUT_BLUE})${dir}$(${TPUT_CLEAR}) ..."
   cd $dir
 
   if [ ! -d AutoDiff ] ; then
@@ -216,8 +216,6 @@ for dir in ${DIRLIST} ; do
           failed_tests+=($dir)
           echo " --> Fails at minimum tested precision 1e-${LOW_PREC}"
         fi
-        # End line for failed file
-        echo ""
       fi
     fi
   done
@@ -227,7 +225,7 @@ for dir in ${DIRLIST} ; do
     if [ "x${gen_ref_output}" == 'xyes' ]; then
       echo "Reference files copied successfully."
     else
-      echo "$(${TPUT_GREEN})Success!$(${TPUT_CLEAR})"
+      echo -n "$(${TPUT_GREEN})Success!$(${TPUT_CLEAR})"
     fi
     cleanup_files
   fi
@@ -238,7 +236,7 @@ for dir in ${DIRLIST} ; do
   cd $BASEDIR
 done
 
-
+echo
 if [ $ALL_SUCCESS -eq 1 ]
 then
   echo "$(${TPUT_GREEN})All tests succeeded.$(${TPUT_CLEAR})"
@@ -246,11 +244,11 @@ then
 else
   echo "$(${TPUT_RED})There were failed tests.$(${TPUT_CLEAR})"
   if [ ${#failed_tests[@]} -gt 0 ]; then
-    echo "The following tests are failed:"
+    echo "The following tests failed:"
     printf "%s\n" "${failed_tests[@]}"
   fi
   if [ ${#failed_tests_low_prec[@]} -gt 0 ]; then
-    echo "The following tests are failed, but passed at low precisions:"
+    echo "The following tests failed, but passed at lower precision:"
     printf "%s\n" "${failed_tests_low_prec[@]}"
   fi
   exit 1

@@ -91,7 +91,7 @@ alchFile                $common/solvate.pdb
 alchCol                 B
 alchOutFile             ${outName}.fepout
 
-alchOutFreq            100
+alchOutFreq            12
 alchEquilSteps         1000
 
 alchVdwLambdaEnd        0.5

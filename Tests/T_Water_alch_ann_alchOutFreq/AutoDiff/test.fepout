@@ -1,4 +1,5 @@
 #            STEP                 Elec                            vdW                    dE           dE_avg         Temp             dG
 #                           l             l+dl             l            l+dl         E(l+dl)-E(l)
 #NEW FEP WINDOW: LAMBDA SET TO 0.1 LAMBDA2 0.15
-#Free energy change for lambda window [ 0.1 0.15 ] is 0 ; net change until now is 0
+FepEnergy:     12      -3279.1185     -3277.1315       341.4075       341.4075         1.9870         1.8380       316.8062         1.8349
+#Free energy change for lambda window [ 0.1 0.15 ] is 1.83495 ; net change until now is 1.83495
