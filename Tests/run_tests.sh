@@ -35,6 +35,13 @@ while [ $# -ge 1 ]; do
   shift
 done
 
+if { echo ${BINARY} | grep -qi "namd3" ; } then
+  echo "Detected a NAMD3 binary"
+  export USING_NAMD3=1
+else
+  export USING_NAMD3=0
+fi
+
 TOPDIR=$(git rev-parse --show-toplevel)
 if [ ! -d ${TOPDIR} ] ; then
   echo "Error: cannot identify top project directory." >& 2
@@ -50,7 +57,7 @@ else
     hash -p ${SPIFF} spiff
 fi
 
-if ! { echo ${DIRLIST} | grep -q 0 ; } then
+if ! { echo ${DIRLIST} | grep -q "T_" ; } then
   DIRLIST=`eval ls -d T_*`
 fi
 
@@ -223,7 +230,7 @@ for dir in ${DIRLIST} ; do
   if [ $SUCCESS -eq 1 ]
   then
     if [ "x${gen_ref_output}" == 'xyes' ]; then
-      echo "Reference files copied successfully."
+      echo -n "Reference files copied successfully."
     else
       echo -n "$(${TPUT_GREEN})Success!$(${TPUT_CLEAR})"
     fi

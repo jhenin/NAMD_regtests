@@ -19,9 +19,9 @@ Info: Built Wed Mar 1 15:12:28 CET 2023 by jhenin on eurus.lbt.ibpc.fr
 Info: 1 NAMD  2.15alpha2  Linux-x86_64-multicore  8    eurus.lbt.ibpc.fr  jhenin
 Info: Running on 8 processors, 1 nodes, 1 physical nodes.
 Info: CPU topology information available.
-Info: Charm++/Converse parallel runtime startup completed at 0.00367298 s
+Info: Charm++/Converse parallel runtime startup completed at 0.00316619 s
 CkLoopLib is used in SMP with simple dynamic scheduling (converse-level notification)
-Info: 559.77 MB of memory in use based on /proc/self/stat
+Info: 559.766 MB of memory in use based on /proc/self/stat
 Info: Configuration file is test.namd
 Info: Working in the current directory /data/jhenin/Projects/NAMD_regtests/Tests/T_Water_MD_noPME
 TCL: Suspending until startup complete.
@@ -103,9 +103,9 @@ Info: 6 CROSSTERM
 Info: 95 VDW
 Info: 0 VDW_PAIRS
 Info: 0 NBTHOLE_PAIRS
-Info: TIME FOR READING PSF FILE: 0.00372098
+Info: TIME FOR READING PSF FILE: 0.00331803
 Info: Reading pdb file ../Common/solvate.pdb
-Info: TIME FOR READING PDB FILE: 0.00131492
+Info: TIME FOR READING PDB FILE: 0.00120529
 Info: 
 Info: ****************************
 Info: STRUCTURE SUMMARY:
@@ -129,10 +129,10 @@ Info: ATOM DENSITY = 0.0996284 atoms/A^3
 Info: *****************************
 Info: Reading from binary file ../Common/equil.coor
 Info: 
-Info: Entering startup at 0.021332 s, 776.727 MB of memory in use
-Info: Startup phase 0 took 7.3506e-05 s, 776.727 MB of memory in use
+Info: Entering startup at 0.0188589 s, 776.727 MB of memory in use
+Info: Startup phase 0 took 5.1948e-05 s, 776.727 MB of memory in use
 Info: ADDED 906 IMPLICIT EXCLUSIONS
-Info: Startup phase 1 took 0.00114151 s, 776.855 MB of memory in use
+Info: Startup phase 1 took 0.0010612 s, 776.855 MB of memory in use
 Info: NONBONDED TABLE R-SQUARED SPACING: 0.0625
 Info: NONBONDED TABLE SIZE: 705 POINTS
 Info: INCONSISTENCY IN FAST TABLE ENERGY VS FORCE: 0.000290235 AT 0.251946
@@ -140,10 +140,10 @@ Info: INCONSISTENCY IN VDWA TABLE ENERGY VS FORCE: 0.0040507 AT 0.251946
 Info: ABSOLUTE IMPRECISION IN VDWB TABLE ENERGY: 1.03398e-25 AT 10.9972
 Info: RELATIVE IMPRECISION IN VDWB TABLE ENERGY: 1.12007e-16 AT 10.9972
 Info: INCONSISTENCY IN VDWB TABLE ENERGY VS FORCE: 0.00150189 AT 0.251946
-Info: Startup phase 2 took 0.000643522 s, 777.484 MB of memory in use
-Info: Startup phase 3 took 4.7849e-05 s, 777.484 MB of memory in use
-Info: Startup phase 4 took 8.0425e-05 s, 777.484 MB of memory in use
-Info: Startup phase 5 took 5.0852e-05 s, 777.484 MB of memory in use
+Info: Startup phase 2 took 0.000563299 s, 777.48 MB of memory in use
+Info: Startup phase 3 took 6.5917e-05 s, 777.48 MB of memory in use
+Info: Startup phase 4 took 6.4413e-05 s, 777.48 MB of memory in use
+Info: Startup phase 5 took 4.1918e-05 s, 777.48 MB of memory in use
 Info: PATCH GRID IS 2 (PERIODIC) BY 2 (PERIODIC) BY 1 (PERIODIC)
 Info: PATCH GRID IS 2-AWAY BY 2-AWAY BY 1-AWAY
 Info: Reading from binary file ../Common/equil.vel
@@ -154,20 +154,20 @@ Info: TORUS B SIZE 1 USING 0
 Info: TORUS C SIZE 1 USING 0
 Info: TORUS MINIMAL MESH SIZE IS 1 BY 1 BY 1
 Info: Placed 100% of base nodes on same physical node as patch
-Info: Startup phase 6 took 0.0003844 s, 777.613 MB of memory in use
-Info: Startup phase 7 took 4.9541e-05 s, 777.613 MB of memory in use
-Info: Startup phase 8 took 4.2705e-05 s, 777.613 MB of memory in use
-Info: Startup phase 9 took 6.0934e-05 s, 777.613 MB of memory in use
-Info: Startup phase 10 took 4.7417e-05 s, 777.613 MB of memory in use
-Info: Startup phase 11 took 7.1415e-05 s, 777.613 MB of memory in use
+Info: Startup phase 6 took 0.00031223 s, 777.609 MB of memory in use
+Info: Startup phase 7 took 4.5859e-05 s, 777.609 MB of memory in use
+Info: Startup phase 8 took 4.0384e-05 s, 777.609 MB of memory in use
+Info: Startup phase 9 took 3.9605e-05 s, 777.609 MB of memory in use
+Info: Startup phase 10 took 4.271e-05 s, 777.609 MB of memory in use
+Info: Startup phase 11 took 6.0504e-05 s, 777.609 MB of memory in use
 LDB: Central LB being created...
-Info: Startup phase 12 took 5.9807e-05 s, 777.613 MB of memory in use
+Info: Startup phase 12 took 5.2042e-05 s, 777.609 MB of memory in use
 Info: CREATING 192 COMPUTE OBJECTS
 Info: useSync: 0 useProxySync: 0
-Info: Startup phase 13 took 0.000645258 s, 777.613 MB of memory in use
-Info: Startup phase 14 took 6.4436e-05 s, 777.613 MB of memory in use
-Info: Startup phase 15 took 6.5566e-05 s, 777.84 MB of memory in use
-Info: Finished startup at 0.0248611 s, 777.84 MB of memory in use
+Info: Startup phase 13 took 0.00039699 s, 777.609 MB of memory in use
+Info: Startup phase 14 took 9.8426e-05 s, 777.609 MB of memory in use
+Info: Startup phase 15 took 5.2237e-05 s, 777.84 MB of memory in use
+Info: Finished startup at 0.0218485 s, 777.84 MB of memory in use
 
 TCL: Original numsteps 100 will be ignored.
 TCL: Running for 20 steps
@@ -215,10 +215,10 @@ ENERGY:      18         0.0000         0.0000         0.0000         0.0000     
 
 ENERGY:      19         0.0000         0.0000         0.0000         0.0000          -3437.9619       347.9289         0.0000         0.0000       588.1796          -2501.8534       327.2365     -3090.0330     -2497.3490       327.2365          21815.9937       -48.8866      9093.7916     21815.9937       -48.8866
 
-LDB: ============= START OF LOAD BALANCING ============== 0.0426097
-LDB: ============== END OF LOAD BALANCING =============== 0.042634
+LDB: ============= START OF LOAD BALANCING ============== 0.0407846
+LDB: ============== END OF LOAD BALANCING =============== 0.0408021
 Info: useSync: 0 useProxySync: 0
-LDB: =============== DONE WITH MIGRATION ================ 0.0426723
+LDB: =============== DONE WITH MIGRATION ================ 0.0408408
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:      20         0.0000         0.0000         0.0000         0.0000          -3441.4071       349.6640         0.0000         0.0000       586.1652          -2505.5779       326.1158     -3091.7431     -2504.4346       326.1158         -21826.7239        57.6719      9093.7916    -21826.7239        57.6719
@@ -231,5 +231,5 @@ WRITING VELOCITIES TO OUTPUT FILE AT STEP 20
 The last velocity output (seq=-2) takes 0.000 seconds, 777.840 MB of memory in use
 ====================================================
 
-WallClock: 0.044082  CPUTime: 0.042837  Memory: 777.839844 MB
+WallClock: 0.042709  CPUTime: 0.041380  Memory: 777.839844 MB
 [Partition 0][Node 0] End of program
