@@ -1,12 +1,12 @@
 Charm++: standalone mode (not using charmrun)
 Charm++> Running in Multicore mode: 8 threads (PEs)
 Charm++> Using recursive bisection (scheme 3) for topology aware partitions
-Converse/Charm++ Commit ID: v6.10.0
+Converse/Charm++ Commit ID: v6.10.2-0-g7bf00fa-namd-charm-6.10.2-build-2020-Aug-05-556
 Warning> Randomization of virtual memory (ASLR) is turned on in the kernel, thread migration may not work! Run 'echo 0 > /proc/sys/kernel/randomize_va_space' as root to disable it, or try running with '+isomalloc_sync'.
 CharmLB> Load balancer assumes all CPUs are same.
 Charm++> Running on 1 hosts (2 sockets x 10 cores x 1 PUs = 20-way SMP)
 Charm++> cpu topology info is gathered in 0.001 seconds.
-Info: NAMD 2.15alpha2 for Linux-x86_64-multicore
+Info: NAMD 2.14 for Linux-x86_64-multicore
 Info: 
 Info: Please visit http://www.ks.uiuc.edu/Research/namd/
 Info: for updates, documentation, and support information.
@@ -14,14 +14,14 @@ Info:
 Info: Please cite Phillips et al., J. Chem. Phys. 153:044130 (2020) doi:10.1063/5.0014475
 Info: in all publications reporting results obtained with NAMD.
 Info: 
-Info: Based on Charm++/Converse 61000 for multicore-linux-x86_64
-Info: Built Mon Mar 20 21:53:38 CET 2023 by jhenin on eurus.lbt.ibpc.fr
-Info: 1 NAMD  2.15alpha2  Linux-x86_64-multicore  8    eurus.lbt.ibpc.fr  jhenin
+Info: Based on Charm++/Converse 61002 for multicore-linux-x86_64-iccstatic
+Info: Built Mon Aug 24 10:08:36 CDT 2020 by jim on belfast.ks.uiuc.edu
+Info: 1 NAMD  2.14  Linux-x86_64-multicore  8    eurus.lbt.ibpc.fr  jhenin
 Info: Running on 8 processors, 1 nodes, 1 physical nodes.
 Info: CPU topology information available.
-Info: Charm++/Converse parallel runtime startup completed at 0.00363157 s
+Info: Charm++/Converse parallel runtime startup completed at 0.00360299 s
 CkLoopLib is used in SMP with simple dynamic scheduling (converse-level notification)
-Info: 559.762 MB of memory in use based on /proc/self/stat
+Info: 567.918 MB of memory in use based on /proc/self/stat
 Info: Configuration file is test.namd
 Info: Working in the current directory /data/jhenin/Projects/NAMD_regtests/Tests/T_Water_ABF
 TCL: Suspending until startup complete.
@@ -43,7 +43,6 @@ Info: LDB BACKGROUND SCALING 1
 Info: HOM BACKGROUND SCALING 1
 Info: PME BACKGROUND SCALING 1
 Info: MIN ATOMS PER PATCH    40
-Info: EMPTY PATCH LOAD       40 ATOMS
 Info: VELOCITY FILE          ../Common/equil.vel
 Info: CENTER OF MASS MOVING INITIALLY? NO
 Info: DIELECTRIC             1
@@ -72,7 +71,6 @@ Info: PAIRLISTS ENABLED
 Info: MARGIN                 4
 Info: HYDROGEN GROUP CUTOFF  2.8
 Info: PATCH DIMENSION        18.8
-Info: OUPUT ENERGY PRECISION 4
 Info: CROSSTERM ENERGY INCLUDED IN DIHEDRAL
 Info: TIMING OUTPUT STEPS    20000
 Info: COLLECTIVE VARIABLES CALCULATION REQUESTED
@@ -112,9 +110,9 @@ Info: 6 CROSSTERM
 Info: 95 VDW
 Info: 0 VDW_PAIRS
 Info: 0 NBTHOLE_PAIRS
-Info: TIME FOR READING PSF FILE: 0.00339947
+Info: TIME FOR READING PSF FILE: 0.00384436
 Info: Reading pdb file ../Common/solvate.pdb
-Info: TIME FOR READING PDB FILE: 0.0011976
+Info: TIME FOR READING PDB FILE: 0.0013464
 Info: 
 Info: ****************************
 Info: STRUCTURE SUMMARY:
@@ -138,22 +136,32 @@ Info: ATOM DENSITY = 0.0996284 atoms/A^3
 Info: *****************************
 Info: Reading from binary file ../Common/equil.coor
 Info: 
-Info: Entering startup at 0.0205366 s, 776.723 MB of memory in use
-Info: Startup phase 0 took 5.265e-05 s, 776.723 MB of memory in use
+Info: Entering startup at 0.0223246 s, 784.711 MB of memory in use
+Info: Startup phase 0 took 8.0898e-05 s, 784.711 MB of memory in use
 Info: ADDED 906 IMPLICIT EXCLUSIONS
-Info: Startup phase 1 took 0.00106047 s, 776.852 MB of memory in use
+Info: Startup phase 1 took 0.000423006 s, 784.84 MB of memory in use
 Info: NONBONDED TABLE R-SQUARED SPACING: 0.0625
 Info: NONBONDED TABLE SIZE: 705 POINTS
+Info: ABSOLUTE IMPRECISION IN FAST TABLE FORCE: 2.11758e-22 AT 10.9516
+Info: RELATIVE IMPRECISION IN FAST TABLE FORCE: 7.2708e-16 AT 10.9516
 Info: INCONSISTENCY IN FAST TABLE ENERGY VS FORCE: 0.000290478 AT 0.251946
+Info: ABSOLUTE IMPRECISION IN SCOR TABLE FORCE: 1.05879e-22 AT 10.9516
+Info: RELATIVE IMPRECISION IN SCOR TABLE FORCE: 2.59334e-16 AT 10.9516
 Info: INCONSISTENCY IN SCOR TABLE ENERGY VS FORCE: 0.000161782 AT 11.0199
+Info: ABSOLUTE IMPRECISION IN VDWA TABLE ENERGY: 9.86076e-32 AT 10.9058
+Info: RELATIVE IMPRECISION IN VDWA TABLE ENERGY: 3.62368e-15 AT 10.9516
+Info: ABSOLUTE IMPRECISION IN VDWA TABLE FORCE: 7.39557e-32 AT 10.9516
+Info: RELATIVE IMPRECISION IN VDWA TABLE FORCE: 9.87262e-16 AT 10.9516
 Info: INCONSISTENCY IN VDWA TABLE ENERGY VS FORCE: 0.0040507 AT 0.251946
-Info: ABSOLUTE IMPRECISION IN VDWB TABLE ENERGY: 1.03398e-25 AT 10.9972
-Info: RELATIVE IMPRECISION IN VDWB TABLE ENERGY: 1.12007e-16 AT 10.9972
+Info: ABSOLUTE IMPRECISION IN VDWB TABLE ENERGY: 2.06795e-25 AT 10.9058
+Info: RELATIVE IMPRECISION IN VDWB TABLE ENERGY: 1.95288e-16 AT 10.9516
+Info: ABSOLUTE IMPRECISION IN VDWB TABLE FORCE: 1.55096e-25 AT 10.9516
+Info: RELATIVE IMPRECISION IN VDWB TABLE FORCE: 1.17143e-15 AT 10.9516
 Info: INCONSISTENCY IN VDWB TABLE ENERGY VS FORCE: 0.00150189 AT 0.251946
-Info: Startup phase 2 took 0.000656863 s, 777.516 MB of memory in use
-Info: Startup phase 3 took 4.6636e-05 s, 777.516 MB of memory in use
-Info: Startup phase 4 took 0.000173889 s, 777.516 MB of memory in use
-Info: Startup phase 5 took 6.0204e-05 s, 777.516 MB of memory in use
+Info: Startup phase 2 took 0.000861494 s, 785.504 MB of memory in use
+Info: Startup phase 3 took 9.9587e-05 s, 785.504 MB of memory in use
+Info: Startup phase 4 took 0.000185819 s, 785.504 MB of memory in use
+Info: Startup phase 5 took 0.000109167 s, 785.504 MB of memory in use
 Info: PATCH GRID IS 2 (PERIODIC) BY 2 (PERIODIC) BY 1 (PERIODIC)
 Info: PATCH GRID IS 2-AWAY BY 2-AWAY BY 1-AWAY
 Info: Reading from binary file ../Common/equil.vel
@@ -164,35 +172,36 @@ Info: TORUS B SIZE 1 USING 0
 Info: TORUS C SIZE 1 USING 0
 Info: TORUS MINIMAL MESH SIZE IS 1 BY 1 BY 1
 Info: Placed 100% of base nodes on same physical node as patch
-Info: Startup phase 6 took 0.000356979 s, 777.777 MB of memory in use
+Info: Startup phase 6 took 0.00039989 s, 785.766 MB of memory in use
 Info: PME using 8 and 8 processors for FFT and reciprocal sum.
 Info: PME GRID LOCATIONS: 0 1 2 3 4 5 6 7
 Info: PME TRANS LOCATIONS: 0 1 2 3 4 5 6 7
 Info: PME USING 1 GRID NODES AND 1 TRANS NODES
 Info: Optimizing 4 FFT steps.  1... 2... 3... 4...   Done.
-Info: Startup phase 7 took 0.00054416 s, 777.777 MB of memory in use
-Info: Startup phase 8 took 4.5916e-05 s, 777.777 MB of memory in use
-Info: Startup phase 9 took 4.2326e-05 s, 777.777 MB of memory in use
-Info: Startup phase 10 took 3.9521e-05 s, 777.777 MB of memory in use
-Info: Startup phase 11 took 8.3871e-05 s, 777.777 MB of memory in use
+Info: Startup phase 7 took 0.000557297 s, 785.766 MB of memory in use
+Info: Startup phase 8 took 7.9114e-05 s, 785.766 MB of memory in use
+Info: Startup phase 9 took 7.8368e-05 s, 785.766 MB of memory in use
+Info: Startup phase 10 took 8.0479e-05 s, 785.766 MB of memory in use
+Info: Startup phase 11 took 9.9869e-05 s, 785.766 MB of memory in use
 LDB: Central LB being created...
-Info: Startup phase 12 took 6.4618e-05 s, 777.777 MB of memory in use
+Info: Startup phase 12 took 0.000106646 s, 785.766 MB of memory in use
 Info: CREATING 200 COMPUTE OBJECTS
 colvars: ----------------------------------------------------------------------
-colvars: Initializing the collective variables module, version 2023-01-31.
+colvars: Initializing the collective variables module, version "2020-07-07".
 colvars: Please cite Fiorin et al, Mol Phys 2013:
-colvars:   https://doi.org/10.1080/00268976.2013.813594
-colvars: as well as all other papers listed below for individual features used.
+colvars:  https://dx.doi.org/10.1080/00268976.2013.813594
+colvars: in any publication based on this calculation.
 colvars: SMP parallelism is enabled; if needed, use "smp off" to override this.
 colvars: This version was built with the C++11 standard or higher.
-colvars: Redefining the Tcl "cv" command to the new script interface.
-colvars: Using NAMD interface, version "2023-01-31".
+colvars: Using NAMD interface, version "2020-05-04".
 colvars: The final output state file will be "test.colvars.state".
+colvars: Opening trajectory file "test.colvars.traj".
+colvars: Redefining the Tcl "cv" command to the new script interface.
 Info: useSync: 0 useProxySync: 0
-Info: Startup phase 13 took 0.000546369 s, 777.777 MB of memory in use
-Info: Startup phase 14 took 6.313e-05 s, 777.777 MB of memory in use
-Info: Startup phase 15 took 4.7379e-05 s, 777.984 MB of memory in use
-Info: Finished startup at 0.0244216 s, 777.984 MB of memory in use
+Info: Startup phase 13 took 0.000747914 s, 785.766 MB of memory in use
+Info: Startup phase 14 took 9.0605e-05 s, 785.766 MB of memory in use
+Info: Startup phase 15 took 4.1227e-05 s, 785.914 MB of memory in use
+Info: Finished startup at 0.026366 s, 785.914 MB of memory in use
 
 colvars: ----------------------------------------------------------------------
 colvars: Reading new configuration:
@@ -202,7 +211,6 @@ colvars: # colvarsTrajFrequency = 1
 colvars: # colvarsRestartFrequency = 0 [default]
 colvars: # scriptedColvarForces = off [default]
 colvars: # scriptingAfterBiases = off [default]
-colvars: # sourceTclFile = "" [default]
 colvars: ----------------------------------------------------------------------
 colvars:   Initializing a new collective variable.
 colvars:   # name = "d"
@@ -216,28 +224,28 @@ colvars:     # forceNoPBC = off [default]
 colvars:     # scalable = on [default]
 colvars:       Initializing atom group "group1".
 colvars:       # name = "" [default]
-colvars:       # centerToOrigin = off [default]
-colvars:       # centerToReference = off [default]
-colvars:       # rotateToReference = off [default]
+colvars:       # centerReference = off [default]
+colvars:       # rotateReference = off [default]
 colvars:       # atomsOfGroup = "" [default]
 colvars:       # indexGroup = "" [default]
 colvars:       # psfSegID =  [default]
 colvars:       # atomsFile = "" [default]
 colvars:       # dummyAtom = ( 0 , 0 , 0 ) [default]
+colvars:       # enableForces = on [default]
 colvars:       # enableFitGradients = on [default]
 colvars:       Enabling scalable calculation for group "group1".
 colvars:       # printAtomIDs = off [default]
 colvars:       Atom group "group1" defined with 1 atoms requested: total mass = 15.9994, total charge = -0.834.
 colvars:       Initializing atom group "group2".
 colvars:       # name = "" [default]
-colvars:       # centerToOrigin = off [default]
-colvars:       # centerToReference = off [default]
-colvars:       # rotateToReference = off [default]
+colvars:       # centerReference = off [default]
+colvars:       # rotateReference = off [default]
 colvars:       # atomsOfGroup = "" [default]
 colvars:       # indexGroup = "" [default]
 colvars:       # psfSegID =  [default]
 colvars:       # atomsFile = "" [default]
 colvars:       # dummyAtom = ( 0 , 0 , 0 ) [default]
+colvars:       # enableForces = on [default]
 colvars:       # enableFitGradients = on [default]
 colvars:       Enabling scalable calculation for group "group2".
 colvars:       # printAtomIDs = off [default]
@@ -290,31 +298,12 @@ colvars: Updating NAMD interface:
 colvars: updating atomic data (0 atoms).
 colvars: updating group data (2 scalable groups, 2 atoms in total).
 colvars: updating grid object data (0 grid objects in total).
-colvars: 
-colvars: SUMMARY OF COLVARS FEATURES USED SO FAR AND THEIR CITATIONS:
-colvars: 
-colvars: - Colvars module:
-colvars: - Colvars-NAMD interface:
-colvars: - Optimal rotation via flexible fitting:
-colvars: - distance colvar component:
-colvars:   Fiorin2013 https://doi.org/10.1080/00268976.2013.813594
-colvars: 
-colvars: - ABF colvar bias implementation:
-colvars: - Internal-forces free energy estimator:
-colvars:   Henin2010 https://doi.org/10.1021/ct9004432
-colvars: 
-colvars: - NAMD engine:
-colvars: - Scalable center-of-mass computation (NAMD):
-colvars:   Phillips2020 https://doi.org/10.1063/5.0014475
-colvars: 
-colvars: updating target temperature (T = 300 K).
 TCL: Original numsteps 100 will be ignored.
 TCL: Running for 20 steps
 colvars: Updating NAMD interface:
 colvars: updating atomic data (0 atoms).
 colvars: updating group data (2 scalable groups, 2 atoms in total).
 colvars: updating grid object data (0 grid objects in total).
-colvars: updating target temperature (T = 300 K).
 colvars: Re-initialized atom group for variable "d":0/0. 1 atoms: total mass = 15.9994, total charge = -0.834.
 colvars: Re-initialized atom group for variable "d":0/1. 1 atoms: total mass = 15.9994, total charge = -0.834.
 colvars: The final output state file will be "test.colvars.state".
@@ -323,7 +312,7 @@ ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP     
 
 ENERGY:       0         0.0000         0.0000         0.0000         0.0000          -3273.6847       328.3840         0.0000         0.0000       573.0580          -2372.2426       318.8236     -2945.3006     -2371.1805       318.8236         -20840.9353       299.3956      9093.7916    -20840.9353       299.3956
 
-ENERGY:       1         0.0000         0.0000         0.0000         0.0000          -3273.6847       328.3840         0.0000        -0.9824       576.2824          -2370.0006       320.6174     -2946.2830     -2365.8415       320.6174          21808.2111       767.5338      9093.7916     21808.2111       767.5338
+ENERGY:       1         0.0000         0.0000         0.0000         0.0000          -3273.6847       328.3840         0.0000        -0.9824       576.2824          -2370.0006       320.6174     -2946.2830     -2365.8415       320.6174          21808.2111       767.5339      9093.7916     21808.2111       767.5339
 
 ENERGY:       2         0.0000         0.0000         0.0000         0.0000          -3275.7617       329.6340         0.0000        -0.3995       573.4495          -2373.0778       319.0413     -2946.5272     -2372.0469       319.0413         -20391.8818       553.4287      9093.7916    -20391.8818       553.4287
 
@@ -347,9 +336,9 @@ ENERGY:      10         0.0000         0.0000         0.0000         0.0000     
 
 ENERGY:      11         0.0000         0.0000         0.0000         0.0000          -3284.0189       339.3223         0.0000        -0.0465       574.5133          -2370.2299       319.6332     -2944.7431     -2366.0597       319.6332          21855.3983       821.5262      9093.7916     21855.3983       821.5262
 
-ENERGY:      12         0.0000         0.0000         0.0000         0.0000          -3284.3736       341.5989         0.0000        -0.0216       570.4244          -2372.3719       317.3583     -2942.7963     -2371.3619       317.3583         -20220.1495       885.0266      9093.7916    -20220.1495       885.0266
+ENERGY:      12         0.0000         0.0000         0.0000         0.0000          -3284.3736       341.5989         0.0000        -0.0216       570.4244          -2372.3719       317.3583     -2942.7963     -2371.3619       317.3583         -20220.1494       885.0266      9093.7916    -20220.1494       885.0266
 
-ENERGY:      13         0.0000         0.0000         0.0000         0.0000          -3284.3736       341.5989         0.0000        -0.0059       572.6682          -2370.1125       318.6067     -2942.7806     -2365.9374       318.6067          21911.8635       890.1862      9093.7916     21911.8635       890.1862
+ENERGY:      13         0.0000         0.0000         0.0000         0.0000          -3284.3736       341.5989         0.0000        -0.0059       572.6682          -2370.1125       318.6067     -2942.7806     -2365.9374       318.6067          21911.8635       890.1863      9093.7916     21911.8635       890.1863
 
 ENERGY:      14         0.0000         0.0000         0.0000         0.0000          -3285.3616       343.5375         0.0000         0.0000       569.1181          -2372.7060       316.6316     -2941.8241     -2371.6640       316.6316         -20073.4723       854.6610      9093.7916    -20073.4723       854.6610
 
@@ -363,121 +352,113 @@ ENERGY:      18         0.0000         0.0000         0.0000         0.0000     
 
 ENERGY:      19         0.0000         0.0000         0.0000         0.0000          -3288.0583       346.5820         0.0000         0.0000       573.0707          -2368.4056       318.8306     -2941.4763     -2364.2188       318.8306          21994.3161       974.2497      9093.7916     21994.3161       974.2497
 
-LDB: ============= START OF LOAD BALANCING ============== 0.0483569
-LDB: ============== END OF LOAD BALANCING =============== 0.0483786
+LDB: ============= START OF LOAD BALANCING ============== 0.0483302
+LDB: ============== END OF LOAD BALANCING =============== 0.0483623
 Info: useSync: 0 useProxySync: 0
-LDB: =============== DONE WITH MIGRATION ================ 0.0484193
+LDB: =============== DONE WITH MIGRATION ================ 0.0484423
 colvars: Saving collective variables state to "test.colvars.state".
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
 ENERGY:      20         0.0000         0.0000         0.0000         0.0000          -3291.5534       347.9271         0.0000         0.0000       571.3401          -2372.2862       317.8678     -2943.6263     -2371.2507       317.8678         -20178.1943       964.4834      9093.7916    -20178.1943       964.4834
 
-colvars: Features of "bias abf1" (refcount)
-colvars: - ON active
-colvars: -    awake
-colvars: -    step_zero_data
-colvars: - ON apply_force
-colvars: -    bypass_extended_Lagrangian_coordinates
-colvars: - ON obtain_total_force
-colvars: -    output_accumulated_work
-colvars: - ON history_dependent
-colvars: -    time_dependent
-colvars: - ON require_scalar_variables
-colvars: - ON calculate_a_PMF
-colvars: -    calculate_TI_samples
-colvars: -    write_TI_samples_
-colvars: -    write_TI_PMF
-colvars: -    scale_biasing_force
+colvars: Features of "bias abf1" ON/OFF (refcount)
+colvars: - active   ON (1)
+colvars: - awake   ON (0)
+colvars: - step_zero_data   OFF (0)
+colvars: - apply_force   ON (0)
+colvars: - bypass_extended_Lagrangian_coordinates   OFF (0)
+colvars: - obtain_total_force   ON (0)
+colvars: - output_accumulated_work   OFF (0)
+colvars: - history_dependent   ON (0)
+colvars: - time_dependent   OFF (0)
+colvars: - require_scalar_variables   ON (0)
+colvars: - calculate_a_PMF   ON (0)
+colvars: - calculate_TI_samples   OFF (0)
+colvars: - write_TI_samples_   OFF (0)
+colvars: - write_TI_PMF   OFF (0)
 colvars:   * child 1
-colvars:   Features of "colvar d" (refcount)
-colvars:   - ON active (1) 
-colvars:   -    awake
-colvars:   - ON gradient (1) 
-colvars:   -    collect_gradient
-colvars:   -    collect_atom_ids
-colvars:   -    velocity_from_finite_differences
-colvars:   - ON total_force (2) 
-colvars:   - ON total_force_calculation (1) 
-colvars:   -    subtract_applied_force_from_total_force
-colvars:   - ON Jacobian_derivative (1) 
-colvars:   -    hide_Jacobian_force
-colvars:   -    extended_Lagrangian
-colvars:   -    external
-colvars:   -    Langevin_dynamics
-colvars:   -    output_energy
-colvars:   - ON output_value
-colvars:   -    output_velocity
-colvars:   - ON output_applied_force
-colvars:   - ON output_total_force
-colvars:   - ON lower_boundary
-colvars:   - ON upper_boundary
-colvars:   -    hard_lower_boundary
-colvars:   -    hard_upper_boundary
-colvars:   -    reflecting_lower_boundary
-colvars:   -    reflecting_upper_boundary
-colvars:   - ON grid
-colvars:   -    running_average
-colvars:   -    correlation_function
-colvars:   -    scripted
-colvars:   -    custom_function
-colvars:   -    periodic
-colvars:   - ON single_component
-colvars:   - ON scalar (7) 
-colvars:   - ON linear (2) 
-colvars:   - ON homogeneous
-colvars:   -    multiple_timestep
+colvars:   Features of "colvar d" ON/OFF (refcount)
+colvars:   - active   ON (2)
+colvars:   - awake   ON (0)
+colvars:   - gradient   ON (1)
+colvars:   - collect_gradient   OFF (0)
+colvars:   - velocity_from_finite_differences   OFF (0)
+colvars:   - total_force   ON (2)
+colvars:   - total_force_calculation   ON (1)
+colvars:   - subtract_applied_force_from_total_force   OFF (0)
+colvars:   - Jacobian_derivative   ON (1)
+colvars:   - hide_Jacobian_force   OFF (0)
+colvars:   - extended_Lagrangian   OFF (0)
+colvars:   - Langevin_dynamics   OFF (0)
+colvars:   - output_energy   OFF (0)
+colvars:   - output_value   ON (0)
+colvars:   - output_velocity   OFF (0)
+colvars:   - output_applied_force   ON (0)
+colvars:   - output_total_force   ON (0)
+colvars:   - lower_boundary   ON (1)
+colvars:   - upper_boundary   ON (1)
+colvars:   - hard_lower_boundary   OFF (0)
+colvars:   - hard_upper_boundary   OFF (0)
+colvars:   - reflecting_lower_boundary   OFF (0)
+colvars:   - reflecting_upper_boundary   OFF (0)
+colvars:   - grid   ON (0)
+colvars:   - running_average   OFF (0)
+colvars:   - correlation_function   OFF (0)
+colvars:   - scripted   OFF (0)
+colvars:   - custom_function   OFF (0)
+colvars:   - periodic   OFF (0)
+colvars:   - single_component   ON (0)
+colvars:   - scalar   ON (6)
+colvars:   - linear   ON (2)
+colvars:   - homogeneous   ON (0)
+colvars:   - multiple_timestep   OFF (0)
 colvars:     * child 1
-colvars:     Features of "cvc distance0001" (refcount)
-colvars:     - ON active
-colvars:     -    scalar
-colvars:     -    periodic
-colvars:     -    defined_width
-colvars:     - ON defined_lower_boundary
-colvars:     -    defined_upper_boundary
-colvars:     - ON gradient (2) 
-colvars:     -    explicit_gradient
-colvars:     - ON inverse_gradient (2) 
-colvars:     - ON Jacobian_derivative (1) 
-colvars:     -    total_force_from_one_group
-colvars:     -    debug_gradient
-colvars:     - ON use_minimum-image_with_PBCs
-colvars:     - ON function_of_centers_of_mass (1) 
-colvars:     - ON scalable_calculation (1) 
-colvars:     - ON scalable_calculation_of_centers_of_mass
-colvars:     -    collect_atom_ids
+colvars:     Features of "cvc distance0001" ON/OFF (refcount)
+colvars:     - active   ON (0)
+colvars:     - scalar   OFF (0)
+colvars:     - periodic   OFF (0)
+colvars:     - defined_width   OFF (0)
+colvars:     - defined_lower_boundary   ON (0)
+colvars:     - defined_upper_boundary   OFF (0)
+colvars:     - gradient   ON (2)
+colvars:     - explicit_gradient   ON (0)
+colvars:     - inverse_gradient   ON (2)
+colvars:     - Jacobian_derivative   ON (1)
+colvars:     - total_force_from_one_group   OFF (0)
+colvars:     - debug_gradient   OFF (0)
+colvars:     - use_minimum-image_with_PBCs   ON (0)
+colvars:     - function_of_centers_of_mass   ON (1)
+colvars:     - scalable_calculation   ON (0)
+colvars:     - scalable_calculation_of_centers_of_mass   ON (1)
 colvars:       * child 1
-colvars:       Features of "atom group group1" (refcount)
-colvars:       -    active
-colvars:       -    center_to_reference
-colvars:       -    center_to_origin
-colvars:       -    rotate_to_origin
-colvars:       -    fitting_group
-colvars:       -    explicit_atom_gradient
-colvars:       -    fit_gradients
-colvars:       -    atomic_forces
-colvars:       - ON scalable_group (1) 
-colvars:       - ON scalable_group_center_of_mass
-colvars:       -    collect_atom_ids
+colvars:       Features of "atom group group1" ON/OFF (refcount)
+colvars:       - active   OFF (0)
+colvars:       - translational_fit   OFF (0)
+colvars:       - rotational_fit   OFF (0)
+colvars:       - fitting_group   OFF (0)
+colvars:       - explicit_atom_gradient   ON (1)
+colvars:       - fit_gradients   OFF (0)
+colvars:       - atomic_forces   OFF (0)
+colvars:       - scalable_group   ON (0)
+colvars:       - scalable_group_center_of_mass   ON (1)
 colvars:       * child 2
-colvars:       Features of "atom group group2" (refcount)
-colvars:       -    active
-colvars:       -    center_to_reference
-colvars:       -    center_to_origin
-colvars:       -    rotate_to_origin
-colvars:       -    fitting_group
-colvars:       -    explicit_atom_gradient
-colvars:       -    fit_gradients
-colvars:       -    atomic_forces
-colvars:       - ON scalable_group (1) 
-colvars:       - ON scalable_group_center_of_mass
-colvars:       -    collect_atom_ids
+colvars:       Features of "atom group group2" ON/OFF (refcount)
+colvars:       - active   OFF (0)
+colvars:       - translational_fit   OFF (0)
+colvars:       - rotational_fit   OFF (0)
+colvars:       - fitting_group   OFF (0)
+colvars:       - explicit_atom_gradient   ON (1)
+colvars:       - fit_gradients   OFF (0)
+colvars:       - atomic_forces   OFF (0)
+colvars:       - scalable_group   ON (0)
+colvars:       - scalable_group_center_of_mass   ON (1)
 WRITING EXTENDED SYSTEM TO OUTPUT FILE AT STEP 20
 WRITING COORDINATES TO OUTPUT FILE AT STEP 20
 COORDINATE DCD FILE test.dcd WAS NOT CREATED
-The last position output (seq=-2) takes 0.000 seconds, 777.984 MB of memory in use
+The last position output (seq=-2) takes 0.000 seconds, 785.914 MB of memory in use
 WRITING VELOCITIES TO OUTPUT FILE AT STEP 20
-The last velocity output (seq=-2) takes 0.000 seconds, 777.984 MB of memory in use
+The last velocity output (seq=-2) takes 0.000 seconds, 785.914 MB of memory in use
 ====================================================
 
-WallClock: 0.051101  CPUTime: 0.049819  Memory: 777.984375 MB
+WallClock: 0.050971  CPUTime: 0.049844  Memory: 785.914062 MB
 [Partition 0][Node 0] End of program
