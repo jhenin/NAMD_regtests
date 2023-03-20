@@ -164,6 +164,9 @@ for dir in ${DIRLIST} ; do
       if [ -f ${basename}.pmf ] ; then
         cp -f ${basename}.pmf AutoDiff/
       fi
+      if [ -f ${basename}.colvars.traj ] ; then
+        cp -f ${basename}.colvars.traj AutoDiff/
+      fi
       if [ -f ${basename}.fepout ] ; then
         cp -f ${basename}.fepout AutoDiff/
       fi
