@@ -157,7 +157,8 @@ for dir in ${DIRLIST} ; do
     $BINARY +p ${NUM_THREADS} $script > ${basename}.log
 
     # Extract energy lines for comparison
-    grep "^ENERGY:\|ETITLE:" ${basename}.log > ${basename}.energy
+    # Added TCLFORCES output lines for Synchronization test
+    grep "^ENERGY:\|^ETITLE:\|^TCL: TCLFORCES" ${basename}.log > ${basename}.energy
 
     # If this test is used to generate the reference output files, copy them
     if [ "x${gen_ref_output}" = 'xyes' ]; then
