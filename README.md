@@ -22,6 +22,8 @@ Add option `-g` to generate reference outputs (overwriting current ones). The re
 - *IDWS*: Interleaved Double-Wide Sampling (specifying `alchLambdaIDWS`)
 - *noPME*: not enabling PME, as is done in all other tests
 - *alchOutFreq*: using `alchOutFreq 12` as opposed to `alchOutFreq 4` in the other tests
+- *CUDASOAint*: enables the GPU-resident mode of namd3 (fails on builds that do not support that feature)
+- *GlobalMasterSync*: enables a Tcl script that outputs messages every timestep to troubleshoot synchronization issues with the GlobalMaster mechanism used by TclForces and Colvars
 
 ## How to create a new regression test
 ```

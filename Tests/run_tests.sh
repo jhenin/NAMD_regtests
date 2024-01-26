@@ -13,7 +13,7 @@ gen_ref_output=''
 export TMPDIR=${TMPDIR:-/tmp}
 
 DIRLIST=''
-BINARY=namd2
+BINARY=namd3
 while [ $# -ge 1 ]; do
   if { echo $1 | grep -q namd ; }; then
     echo "Using NAMD executable from $1"
@@ -152,13 +152,13 @@ for dir in ${DIRLIST} ; do
     script=`basename ${script}`
     basename=${script%.namd}
 
-    # Run the test (use a subshell to avoid cluttering stdout)
-    # Use multiple threads to test SMP code (TODO: move SMP tests to interface?)
     $BINARY +p ${NUM_THREADS} $script > ${basename}.log
 
     # Extract energy lines for comparison
     # Added TCLFORCES output lines for Synchronization test
-    grep "^ENERGY:\|^ETITLE:\|^TCL: TCLFORCES" ${basename}.log > ${basename}.energy
+    grep "^ENERGY:\|^ETITLE:\|^TCL: TCLFORCES" ${basename}.log > ${basename}.energy_all_ts
+    # Retain only energy output at outer timesteps (with all force terms)
+    awk '$1!="ENERGY:" || $2 % 4 == 0 {print}'  ${basename}.energy_all_ts > ${basename}.energy
 
     # If this test is used to generate the reference output files, copy them
     if [ "x${gen_ref_output}" = 'xyes' ]; then
@@ -173,6 +173,7 @@ for dir in ${DIRLIST} ; do
       fi
       cp -f ${basename}.log AutoDiff/
       cp -f ${basename}.energy AutoDiff/
+      cp -f ${basename}.energy_all_ts AutoDiff/
 
       # Update any additional files with current versions
       for file in AutoDiff/*; do
@@ -207,6 +208,9 @@ for dir in ${DIRLIST} ; do
       if [ ${base} != ${base%.log} ]
       then
         echo -n "(warning: differences in log file $base) "
+      elif [ ${base} != ${base%.energy_all_ts} ]
+      then
+        echo -n "(warning: differences in full energy output file $base) "
       else
         echo -e "\n*** Failure for file $(${TPUT_RED})$base$(${TPUT_CLEAR}): see `pwd`/$base.diff "
         SUCCESS=0
