@@ -158,7 +158,9 @@ for dir in ${DIRLIST} ; do
     # Added TCLFORCES output lines for Synchronization test
     grep "^ENERGY:\|^ETITLE:\|^TCL: TCLFORCES" ${basename}.log > ${basename}.energy_all_ts
     # Retain only energy output at outer timesteps (with all force terms)
-    awk '$1!="ENERGY:" || $2 % 4 == 0 {print}'  ${basename}.energy_all_ts > ${basename}.energy
+    awk '$1 == "ETITLE:" || ($1=="ENERGY:" && $2 % 4 == 0) {print}'  ${basename}.energy_all_ts > ${basename}.energy
+    # Retain only time step numbers for synchronization test
+    awk '$1=="ENERGY:" {print $1, $2} $1!="ENERGY:" {print}'  ${basename}.energy_all_ts > ${basename}.sync
 
     # If this test is used to generate the reference output files, copy them
     if [ "x${gen_ref_output}" = 'xyes' ]; then

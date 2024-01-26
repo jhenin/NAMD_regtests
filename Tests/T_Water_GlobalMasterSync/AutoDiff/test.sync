@@ -1,0 +1,45 @@
+TCL: TCLFORCES 0  (0)
+TCL: TCLFORCES 1  (1)
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+ENERGY: 0
+TCL: TCLFORCES 2  (2)
+ENERGY: 1
+TCL: TCLFORCES 3  (3)
+ENERGY: 2
+TCL: TCLFORCES 4  (4)
+ENERGY: 3
+TCL: TCLFORCES 5  (5)
+ENERGY: 4
+TCL: TCLFORCES 6  (6)
+ENERGY: 5
+TCL: TCLFORCES 7  (7)
+ENERGY: 6
+TCL: TCLFORCES 8  (8)
+ENERGY: 7
+TCL: TCLFORCES 9  (9)
+ENERGY: 8
+TCL: TCLFORCES 10  (10)
+ENERGY: 9
+TCL: TCLFORCES 11  (11)
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+ENERGY: 10
+TCL: TCLFORCES 12  (12)
+ENERGY: 11
+TCL: TCLFORCES 13  (13)
+ENERGY: 12
+TCL: TCLFORCES 14  (14)
+ENERGY: 13
+TCL: TCLFORCES 15  (15)
+ENERGY: 14
+TCL: TCLFORCES 16  (16)
+ENERGY: 15
+TCL: TCLFORCES 17  (17)
+ENERGY: 16
+TCL: TCLFORCES 18  (18)
+ENERGY: 17
+TCL: TCLFORCES 19  (19)
+ENERGY: 18
+ENERGY: 19
+TCL: TCLFORCES 20  (20)
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+ENERGY: 20
