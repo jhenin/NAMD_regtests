@@ -88,12 +88,12 @@ alchOutFile             ${outName}.fepout
 alchOutFreq            4
 alchEquilSteps         1000
 
-alchVdwLambdaEnd        0.5
+alchVdwLambdaEnd        1.0
 alchElecLambdaStart     0.5
 alchVdWShiftCoeff       6.0
 
 alchLambda 0.1
-alchLambda2 0.15
+alchLambda2 0.3
 
 run 20
 
