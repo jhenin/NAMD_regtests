@@ -90,7 +90,7 @@ cleanup_files() {
   for script in test*.namd testres*.namd ; do
     for f in ${script%.namd}.*diff; do if [ ! -s $f ]; then rm -f $f; fi; done # remove empty diffs only
     rm -f ${script%.namd}.*{BAK,old,backup}
-    for f in ${script%.namd}.*{state,state.stripped,log,traj,coor,vel,xsc,dcd,pmf,hills,grad,force,count,histogram?.dat,hist.dat,corrfunc.dat,histogram?.dx,count.dx,pmf.dx,output.dat,fepout,energy}
+    for f in ${script%.namd}.*{state,state.stripped,log,traj,coor,vel,xsc,dcd,pmf,hills,grad,force,count,histogram?.dat,hist.dat,corrfunc.dat,histogram?.dx,count.dx,pmf.dx,output.dat,fepout,energy,energy_all_ts,sync}
     do
       if [ ! -f "$f.diff" ]; then rm -f $f; fi # keep files that have a non-empty diff
     done

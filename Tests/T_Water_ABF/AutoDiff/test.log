@@ -19,9 +19,9 @@ Info: Built Mon Aug 24 10:08:36 CDT 2020 by jim on belfast.ks.uiuc.edu
 Info: 1 NAMD  2.14  Linux-x86_64-multicore  8    eurus.lbt.ibpc.fr  jhenin
 Info: Running on 8 processors, 1 nodes, 1 physical nodes.
 Info: CPU topology information available.
-Info: Charm++/Converse parallel runtime startup completed at 0.0038401 s
+Info: Charm++/Converse parallel runtime startup completed at 0.00379487 s
 CkLoopLib is used in SMP with simple dynamic scheduling (converse-level notification)
-Info: 567.926 MB of memory in use based on /proc/self/stat
+Info: 567.922 MB of memory in use based on /proc/self/stat
 Info: Configuration file is test.namd
 Info: Working in the current directory /data/jhenin/Projects/NAMD_regtests/Tests/T_Water_ABF
 TCL: Suspending until startup complete.
@@ -110,9 +110,9 @@ Info: 6 CROSSTERM
 Info: 95 VDW
 Info: 0 VDW_PAIRS
 Info: 0 NBTHOLE_PAIRS
-Info: TIME FOR READING PSF FILE: 0.00314358
+Info: TIME FOR READING PSF FILE: 0.00324853
 Info: Reading pdb file ../Common/solvate.pdb
-Info: TIME FOR READING PDB FILE: 0.00115046
+Info: TIME FOR READING PDB FILE: 0.00113183
 Info: 
 Info: ****************************
 Info: STRUCTURE SUMMARY:
@@ -136,10 +136,10 @@ Info: ATOM DENSITY = 0.0996284 atoms/A^3
 Info: *****************************
 Info: Reading from binary file ../Common/equil.coor
 Info: 
-Info: Entering startup at 0.0200763 s, 784.738 MB of memory in use
-Info: Startup phase 0 took 0.000104669 s, 784.738 MB of memory in use
+Info: Entering startup at 0.0197119 s, 784.719 MB of memory in use
+Info: Startup phase 0 took 7.9984e-05 s, 784.719 MB of memory in use
 Info: ADDED 906 IMPLICIT EXCLUSIONS
-Info: Startup phase 1 took 0.000419505 s, 784.867 MB of memory in use
+Info: Startup phase 1 took 0.000370712 s, 784.848 MB of memory in use
 Info: NONBONDED TABLE R-SQUARED SPACING: 0.0625
 Info: NONBONDED TABLE SIZE: 705 POINTS
 Info: ABSOLUTE IMPRECISION IN FAST TABLE FORCE: 2.11758e-22 AT 10.9516
@@ -158,10 +158,10 @@ Info: RELATIVE IMPRECISION IN VDWB TABLE ENERGY: 1.95288e-16 AT 10.9516
 Info: ABSOLUTE IMPRECISION IN VDWB TABLE FORCE: 1.55096e-25 AT 10.9516
 Info: RELATIVE IMPRECISION IN VDWB TABLE FORCE: 1.17143e-15 AT 10.9516
 Info: INCONSISTENCY IN VDWB TABLE ENERGY VS FORCE: 0.00150189 AT 0.251946
-Info: Startup phase 2 took 0.000882005 s, 785.531 MB of memory in use
-Info: Startup phase 3 took 7.4823e-05 s, 785.531 MB of memory in use
-Info: Startup phase 4 took 0.000188274 s, 785.531 MB of memory in use
-Info: Startup phase 5 took 7.8252e-05 s, 785.531 MB of memory in use
+Info: Startup phase 2 took 0.000813846 s, 785.512 MB of memory in use
+Info: Startup phase 3 took 7.2791e-05 s, 785.512 MB of memory in use
+Info: Startup phase 4 took 0.000159034 s, 785.512 MB of memory in use
+Info: Startup phase 5 took 8.8278e-05 s, 785.512 MB of memory in use
 Info: PATCH GRID IS 2 (PERIODIC) BY 2 (PERIODIC) BY 1 (PERIODIC)
 Info: PATCH GRID IS 2-AWAY BY 2-AWAY BY 1-AWAY
 Info: Reading from binary file ../Common/equil.vel
@@ -172,19 +172,19 @@ Info: TORUS B SIZE 1 USING 0
 Info: TORUS C SIZE 1 USING 0
 Info: TORUS MINIMAL MESH SIZE IS 1 BY 1 BY 1
 Info: Placed 100% of base nodes on same physical node as patch
-Info: Startup phase 6 took 0.000423434 s, 785.793 MB of memory in use
+Info: Startup phase 6 took 0.000450146 s, 785.773 MB of memory in use
 Info: PME using 8 and 8 processors for FFT and reciprocal sum.
 Info: PME GRID LOCATIONS: 0 1 2 3 4 5 6 7
 Info: PME TRANS LOCATIONS: 0 1 2 3 4 5 6 7
 Info: PME USING 1 GRID NODES AND 1 TRANS NODES
 Info: Optimizing 4 FFT steps.  1... 2... 3... 4...   Done.
-Info: Startup phase 7 took 0.000511168 s, 785.793 MB of memory in use
-Info: Startup phase 8 took 7.9367e-05 s, 785.793 MB of memory in use
-Info: Startup phase 9 took 7.8575e-05 s, 785.793 MB of memory in use
-Info: Startup phase 10 took 6.9808e-05 s, 785.793 MB of memory in use
-Info: Startup phase 11 took 0.000108501 s, 785.793 MB of memory in use
+Info: Startup phase 7 took 0.000457501 s, 785.773 MB of memory in use
+Info: Startup phase 8 took 9.3867e-05 s, 785.773 MB of memory in use
+Info: Startup phase 9 took 7.5916e-05 s, 785.773 MB of memory in use
+Info: Startup phase 10 took 6.9055e-05 s, 785.773 MB of memory in use
+Info: Startup phase 11 took 0.000139333 s, 785.773 MB of memory in use
 LDB: Central LB being created...
-Info: Startup phase 12 took 8.49e-05 s, 785.793 MB of memory in use
+Info: Startup phase 12 took 8.3305e-05 s, 785.773 MB of memory in use
 Info: CREATING 200 COMPUTE OBJECTS
 colvars: ----------------------------------------------------------------------
 colvars: Initializing the collective variables module, version "2020-07-07".
@@ -198,10 +198,10 @@ colvars: The final output state file will be "test.colvars.state".
 colvars: Opening trajectory file "test.colvars.traj".
 colvars: Redefining the Tcl "cv" command to the new script interface.
 Info: useSync: 0 useProxySync: 0
-Info: Startup phase 13 took 0.000592444 s, 785.793 MB of memory in use
-Info: Startup phase 14 took 0.000119503 s, 785.793 MB of memory in use
-Info: Startup phase 15 took 8.0837e-05 s, 785.941 MB of memory in use
-Info: Finished startup at 0.0239724 s, 785.941 MB of memory in use
+Info: Startup phase 13 took 0.000547655 s, 785.773 MB of memory in use
+Info: Startup phase 14 took 0.000111177 s, 785.773 MB of memory in use
+Info: Startup phase 15 took 5.7406e-05 s, 785.922 MB of memory in use
+Info: Finished startup at 0.023382 s, 785.922 MB of memory in use
 
 colvars: ----------------------------------------------------------------------
 colvars: Reading new configuration:
@@ -312,7 +312,7 @@ ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP     
 
 ENERGY:       0         0.0000         0.0000         0.0000         0.0000          -3273.6847       328.3840         0.0000         0.0000       573.0580          -2372.2426       318.8236     -2945.3006     -2371.1805       318.8236         -20840.9353       299.3956      9093.7916    -20840.9353       299.3956
 
-ENERGY:       1         0.0000         0.0000         0.0000         0.0000          -3273.6847       328.3840         0.0000        -0.9824       576.2824          -2370.0006       320.6174     -2946.2830     -2365.8415       320.6174          21808.2111       767.5339      9093.7916     21808.2111       767.5339
+ENERGY:       1         0.0000         0.0000         0.0000         0.0000          -3273.6847       328.3840         0.0000        -0.9824       576.2824          -2370.0006       320.6174     -2946.2830     -2365.8415       320.6174          21808.2111       767.5338      9093.7916     21808.2111       767.5338
 
 ENERGY:       2         0.0000         0.0000         0.0000         0.0000          -3275.7617       329.6340         0.0000        -0.3995       573.4495          -2373.0778       319.0413     -2946.5272     -2372.0469       319.0413         -20391.8818       553.4287      9093.7916    -20391.8818       553.4287
 
@@ -326,9 +326,9 @@ ENERGY:       6         0.0000         0.0000         0.0000         0.0000     
 
 ENERGY:       7         0.0000         0.0000         0.0000         0.0000          -3280.3075       334.1002         0.0000        -0.1888       576.5832          -2369.8129       320.7848     -2946.3961     -2365.6452       320.7848          21747.2932       702.2240      9093.7916     21747.2932       702.2240
 
-ENERGY:       8         0.0000         0.0000         0.0000         0.0000          -3281.8795       336.7612         0.0000        -0.1235       572.7644          -2372.4774       318.6602     -2945.2418     -2371.4509       318.6602         -20390.2948       737.9904      9093.7916    -20390.2948       737.9904
+ENERGY:       8         0.0000         0.0000         0.0000         0.0000          -3281.8795       336.7612         0.0000        -0.1235       572.7644          -2372.4774       318.6602     -2945.2418     -2371.4509       318.6602         -20390.2948       737.9905      9093.7916    -20390.2948       737.9905
 
-ENERGY:       9         0.0000         0.0000         0.0000         0.0000          -3281.8795       336.7612         0.0000        -0.1063       575.2383          -2369.9864       320.0365     -2945.2246     -2365.8151       320.0365          21791.6036       751.2368      9093.7916     21791.6036       751.2368
+ENERGY:       9         0.0000         0.0000         0.0000         0.0000          -3281.8795       336.7612         0.0000        -0.1063       575.2383          -2369.9864       320.0365     -2945.2246     -2365.8151       320.0365          21791.6036       751.2369      9093.7916     21791.6036       751.2369
 
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
@@ -344,7 +344,7 @@ ENERGY:      14         0.0000         0.0000         0.0000         0.0000     
 
 ENERGY:      15         0.0000         0.0000         0.0000         0.0000          -3285.3616       343.5375         0.0000         0.0000       571.8429          -2369.9812       318.1475     -2941.8241     -2365.8052       318.1475          21869.9044       858.2723      9093.7916     21869.9044       858.2723
 
-ENERGY:      16         0.0000         0.0000         0.0000         0.0000          -3285.8963       345.1686         0.0000         0.0000       568.5296          -2372.1981       316.3041     -2940.7277     -2371.2148       316.3041         -20181.7060       914.3598      9093.7916    -20181.7060       914.3598
+ENERGY:      16         0.0000         0.0000         0.0000         0.0000          -3285.8963       345.1686         0.0000         0.0000       568.5296          -2372.1981       316.3041     -2940.7277     -2371.2148       316.3041         -20181.7060       914.3597      9093.7916    -20181.7060       914.3597
 
 ENERGY:      17         0.0000         0.0000         0.0000         0.0000          -3285.8963       345.1686         0.0000         0.0000       571.6185          -2369.1092       318.0227     -2940.7277     -2364.9238       318.0227          21927.3555       917.5694      9093.7916     21927.3555       917.5694
 
@@ -352,10 +352,10 @@ ENERGY:      18         0.0000         0.0000         0.0000         0.0000     
 
 ENERGY:      19         0.0000         0.0000         0.0000         0.0000          -3288.0583       346.5820         0.0000         0.0000       573.0707          -2368.4056       318.8306     -2941.4763     -2364.2188       318.8306          21994.3161       974.2497      9093.7916     21994.3161       974.2497
 
-LDB: ============= START OF LOAD BALANCING ============== 0.0453522
-LDB: ============== END OF LOAD BALANCING =============== 0.0453872
+LDB: ============= START OF LOAD BALANCING ============== 0.0440161
+LDB: ============== END OF LOAD BALANCING =============== 0.0440519
 Info: useSync: 0 useProxySync: 0
-LDB: =============== DONE WITH MIGRATION ================ 0.0454507
+LDB: =============== DONE WITH MIGRATION ================ 0.0441117
 colvars: Saving collective variables state to "test.colvars.state".
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 
@@ -455,10 +455,10 @@ colvars:       - scalable_group_center_of_mass   ON (1)
 WRITING EXTENDED SYSTEM TO OUTPUT FILE AT STEP 20
 WRITING COORDINATES TO OUTPUT FILE AT STEP 20
 COORDINATE DCD FILE test.dcd WAS NOT CREATED
-The last position output (seq=-2) takes 0.000 seconds, 785.941 MB of memory in use
+The last position output (seq=-2) takes 0.000 seconds, 785.922 MB of memory in use
 WRITING VELOCITIES TO OUTPUT FILE AT STEP 20
-The last velocity output (seq=-2) takes 0.000 seconds, 785.941 MB of memory in use
+The last velocity output (seq=-2) takes 0.000 seconds, 785.922 MB of memory in use
 ====================================================
 
-WallClock: 0.047843  CPUTime: 0.046316  Memory: 785.941406 MB
+WallClock: 0.046417  CPUTime: 0.044761  Memory: 785.921875 MB
 [Partition 0][Node 0] End of program

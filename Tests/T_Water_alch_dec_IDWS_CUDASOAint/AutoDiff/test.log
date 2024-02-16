@@ -19,9 +19,9 @@ Info: Built Mon Aug 24 10:08:36 CDT 2020 by jim on belfast.ks.uiuc.edu
 Info: 1 NAMD  2.14  Linux-x86_64-multicore  8    eurus.lbt.ibpc.fr  jhenin
 Info: Running on 8 processors, 1 nodes, 1 physical nodes.
 Info: CPU topology information available.
-Info: Charm++/Converse parallel runtime startup completed at 0.00314234 s
+Info: Charm++/Converse parallel runtime startup completed at 0.00309063 s
 CkLoopLib is used in SMP with simple dynamic scheduling (converse-level notification)
-Info: 567.922 MB of memory in use based on /proc/self/stat
+Info: 567.918 MB of memory in use based on /proc/self/stat
 Info: Configuration file is test.namd
 Info: Working in the current directory /data/jhenin/Projects/NAMD_regtests/Tests/T_Water_alch_dec_IDWS_CUDASOAint
 Running NAMD2, cudasoaIntegrate is not available
@@ -124,9 +124,9 @@ Info: 6 CROSSTERM
 Info: 95 VDW
 Info: 0 VDW_PAIRS
 Info: 0 NBTHOLE_PAIRS
-Info: TIME FOR READING PSF FILE: 0.00356365
+Info: TIME FOR READING PSF FILE: 0.00313678
 Info: Reading pdb file ../Common/solvate.pdb
-Info: TIME FOR READING PDB FILE: 0.00127325
+Info: TIME FOR READING PDB FILE: 0.00104819
 Info: 
 Info: To read alchdata from file: ../Common/solvate.pdb
 Info: To read alchflag data from column: 5
@@ -154,10 +154,10 @@ Info: ATOM DENSITY = 0.0996284 atoms/A^3
 Info: *****************************
 Info: Reading from binary file ../Common/equil.coor
 Info: 
-Info: Entering startup at 0.0224195 s, 784.781 MB of memory in use
-Info: Startup phase 0 took 7.4816e-05 s, 784.781 MB of memory in use
+Info: Entering startup at 0.0198764 s, 784.777 MB of memory in use
+Info: Startup phase 0 took 7.2955e-05 s, 784.777 MB of memory in use
 Info: ADDED 906 IMPLICIT EXCLUSIONS
-Info: Startup phase 1 took 0.000381112 s, 784.91 MB of memory in use
+Info: Startup phase 1 took 0.000312404 s, 784.906 MB of memory in use
 Info: NONBONDED TABLE R-SQUARED SPACING: 0.0625
 Info: NONBONDED TABLE SIZE: 705 POINTS
 Info: ABSOLUTE IMPRECISION IN FAST TABLE FORCE: 2.11758e-22 AT 10.9516
@@ -176,10 +176,10 @@ Info: RELATIVE IMPRECISION IN VDWB TABLE ENERGY: 1.95288e-16 AT 10.9516
 Info: ABSOLUTE IMPRECISION IN VDWB TABLE FORCE: 1.55096e-25 AT 10.9516
 Info: RELATIVE IMPRECISION IN VDWB TABLE FORCE: 1.17143e-15 AT 10.9516
 Info: INCONSISTENCY IN VDWB TABLE ENERGY VS FORCE: 0.00150189 AT 0.251946
-Info: Startup phase 2 took 0.000850374 s, 785.547 MB of memory in use
-Info: Startup phase 3 took 9.1804e-05 s, 785.547 MB of memory in use
-Info: Startup phase 4 took 0.000197532 s, 785.547 MB of memory in use
-Info: Startup phase 5 took 9.2631e-05 s, 785.547 MB of memory in use
+Info: Startup phase 2 took 0.000641736 s, 785.543 MB of memory in use
+Info: Startup phase 3 took 6.8986e-05 s, 785.543 MB of memory in use
+Info: Startup phase 4 took 0.000138348 s, 785.543 MB of memory in use
+Info: Startup phase 5 took 6.6771e-05 s, 785.543 MB of memory in use
 Info: PATCH GRID IS 2 (PERIODIC) BY 2 (PERIODIC) BY 1 (PERIODIC)
 Info: PATCH GRID IS 2-AWAY BY 2-AWAY BY 1-AWAY
 Info: Reading from binary file ../Common/equil.vel
@@ -190,25 +190,25 @@ Info: TORUS B SIZE 1 USING 0
 Info: TORUS C SIZE 1 USING 0
 Info: TORUS MINIMAL MESH SIZE IS 1 BY 1 BY 1
 Info: Placed 100% of base nodes on same physical node as patch
-Info: Startup phase 6 took 0.000440522 s, 785.684 MB of memory in use
+Info: Startup phase 6 took 0.000309068 s, 785.672 MB of memory in use
 Info: PME using 8 and 8 processors for FFT and reciprocal sum.
 Info: PME GRID LOCATIONS: 0 1 2 3 4 5 6 7
 Info: PME TRANS LOCATIONS: 0 1 2 3 4 5 6 7
 Info: PME USING 1 GRID NODES AND 1 TRANS NODES
 Info: Optimizing 4 FFT steps.  1... 2... 3... 4...   Done.
-Info: Startup phase 7 took 0.000580865 s, 785.836 MB of memory in use
-Info: Startup phase 8 took 9.5136e-05 s, 785.836 MB of memory in use
-Info: Startup phase 9 took 6.939e-05 s, 785.836 MB of memory in use
-Info: Startup phase 10 took 6.671e-05 s, 785.836 MB of memory in use
-Info: Startup phase 11 took 0.000110543 s, 785.836 MB of memory in use
+Info: Startup phase 7 took 0.000501025 s, 785.812 MB of memory in use
+Info: Startup phase 8 took 6.8981e-05 s, 785.812 MB of memory in use
+Info: Startup phase 9 took 6.4901e-05 s, 785.812 MB of memory in use
+Info: Startup phase 10 took 6.6728e-05 s, 785.812 MB of memory in use
+Info: Startup phase 11 took 8.6481e-05 s, 785.812 MB of memory in use
 LDB: Central LB being created...
-Info: Startup phase 12 took 8.9405e-05 s, 785.836 MB of memory in use
+Info: Startup phase 12 took 7.1324e-05 s, 785.812 MB of memory in use
 Info: CREATING 196 COMPUTE OBJECTS
 Info: useSync: 0 useProxySync: 0
-Info: Startup phase 13 took 0.000625831 s, 785.836 MB of memory in use
-Info: Startup phase 14 took 7.1813e-05 s, 785.836 MB of memory in use
-Info: Startup phase 15 took 3.937e-05 s, 785.996 MB of memory in use
-Info: Finished startup at 0.0262974 s, 785.996 MB of memory in use
+Info: Startup phase 13 took 0.000432148 s, 785.812 MB of memory in use
+Info: Startup phase 14 took 7.3473e-05 s, 785.812 MB of memory in use
+Info: Startup phase 15 took 3.21e-05 s, 785.988 MB of memory in use
+Info: Finished startup at 0.0228838 s, 785.988 MB of memory in use
 
 TCL: Original numsteps 100 will be ignored.
 TCL: Running for 20 steps
@@ -231,7 +231,7 @@ FEP:          2         0.0000     -3261.3135       320.8350
 ENERGY:       3         0.0000         0.0000         0.0000         0.0000          -3246.9333       315.1980         0.0000         0.0000       576.7420          -2354.9932       320.8732     -2931.7353     -2350.8818       320.8732          20762.8944      -112.7833      9093.7916     20762.8944      -112.7833
 FEP:          3         0.0000     -3261.3135       320.8350
 
-ENERGY:       4         0.0000         0.0000         0.0000         0.0000          -3248.4575       317.2674         0.0000         0.0000       573.3054          -2357.8847       318.9612     -2931.1901     -2356.8808       318.9612         -21009.7833       -43.1598      9093.7916    -21009.7833       -43.1598
+ENERGY:       4         0.0000         0.0000         0.0000         0.0000          -3248.4575       317.2674         0.0000         0.0000       573.3054          -2357.8847       318.9612     -2931.1901     -2356.8808       318.9612         -21009.7834       -43.1598      9093.7916    -21009.7834       -43.1598
 FEP:          4         0.0000     -3191.0343       310.0345
 
 ENERGY:       5         0.0000         0.0000         0.0000         0.0000          -3248.4575       317.2674         0.0000         0.0000       576.0943          -2355.0958       320.5128     -2931.1901     -2350.9783       320.5128          20830.9020       -42.4751      9093.7916     20830.9020       -42.4751
@@ -258,10 +258,10 @@ FEP:         10         0.0000     -3268.9012       330.8920
 ENERGY:      11         0.0000         0.0000         0.0000         0.0000          -3254.7207       325.0491         0.0000         0.0000       574.0732          -2355.5984       319.3884     -2929.6716     -2351.4762       319.3884          21095.9206       236.9706      9093.7916     21095.9206       236.9706
 FEP:         11         0.0000     -3268.9012       330.8920
 
-ENERGY:      12         0.0000         0.0000         0.0000         0.0000          -3255.0908       327.3394         0.0000         0.0000       570.0288          -2357.7226       317.1383     -2927.7514     -2356.7295       317.1383         -20606.3298       323.8199      9093.7916    -20606.3298       323.8199
+ENERGY:      12         0.0000         0.0000         0.0000         0.0000          -3255.0908       327.3394         0.0000         0.0000       570.0288          -2357.7226       317.1383     -2927.7514     -2356.7295       317.1383         -20606.3297       323.8199      9093.7916    -20606.3297       323.8199
 FEP:         12         0.0000     -3198.7628       319.4967
 
-ENERGY:      13         0.0000         0.0000         0.0000         0.0000          -3255.0908       327.3394         0.0000         0.0000       572.2535          -2355.4978       318.3760     -2927.7514     -2351.3701       318.3760          21172.6685       326.4854      9093.7916     21172.6685       326.4854
+ENERGY:      13         0.0000         0.0000         0.0000         0.0000          -3255.0908       327.3394         0.0000         0.0000       572.2535          -2355.4978       318.3760     -2927.7514     -2351.3701       318.3760          21172.6685       326.4855      9093.7916     21172.6685       326.4855
 FEP:         13         0.0000     -3198.7628       319.4967
 
 ENERGY:      14         0.0000         0.0000         0.0000         0.0000          -3256.0826       329.3040         0.0000         0.0000       568.7242          -2358.0545       316.4124     -2926.7787     -2357.0260       316.4124         -20342.0905       409.4670      9093.7916    -20342.0905       409.4670
@@ -273,32 +273,32 @@ FEP:         15         0.0000     -3200.2113       321.1922
 ENERGY:      16         0.0000         0.0000         0.0000         0.0000          -3256.5487       330.9784         0.0000         0.0000       568.0412          -2357.5291       316.0324     -2925.5703     -2356.5561       316.0324         -20448.4714       471.3844      9093.7916    -20448.4714       471.3844
 FEP:         16         0.0000     -3270.3946       337.2765
 
-ENERGY:      17         0.0000         0.0000         0.0000         0.0000          -3256.5487       330.9784         0.0000         0.0000       571.0156          -2354.5547       317.6873     -2925.5703     -2350.4172       317.6873          21307.4880       474.5855      9093.7916     21307.4880       474.5855
+ENERGY:      17         0.0000         0.0000         0.0000         0.0000          -3256.5487       330.9784         0.0000         0.0000       571.0156          -2354.5547       317.6873     -2925.5703     -2350.4172       317.6873          21307.4880       474.5854      9093.7916     21307.4880       474.5854
 FEP:         17         0.0000     -3270.3946       337.2765
 
 ENERGY:      18         0.0000         0.0000         0.0000         0.0000          -3258.5620       332.4564         0.0000         0.0000       568.4850          -2357.6205       316.2794     -2926.1056     -2356.5993       316.2794         -20227.7390       526.9276      9093.7916    -20227.7390       526.9276
-FEP:         18         0.0000     -3272.3027       338.9587
+FEP:         18         0.0000     -3272.3028       338.9587
 
-ENERGY:      19         0.0000         0.0000         0.0000         0.0000          -3258.5620       332.4564         0.0000         0.0000       572.1882          -2353.9173       318.3397     -2926.1056     -2349.7787       318.3397          21371.8702       530.2505      9093.7916     21371.8702       530.2505
-FEP:         19         0.0000     -3272.3027       338.9587
+ENERGY:      19         0.0000         0.0000         0.0000         0.0000          -3258.5620       332.4564         0.0000         0.0000       572.1882          -2353.9173       318.3397     -2926.1056     -2349.7787       318.3397          21371.8702       530.2504      9093.7916     21371.8702       530.2504
+FEP:         19         0.0000     -3272.3028       338.9587
 
-LDB: ============= START OF LOAD BALANCING ============== 0.0517492
-LDB: ============== END OF LOAD BALANCING =============== 0.0517783
+LDB: ============= START OF LOAD BALANCING ============== 0.0464279
+LDB: ============== END OF LOAD BALANCING =============== 0.0464539
 Info: useSync: 0 useProxySync: 0
-LDB: =============== DONE WITH MIGRATION ================ 0.051839
+LDB: =============== DONE WITH MIGRATION ================ 0.0465117
 ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
 FEPTITLE:    TS          BOND2         ELECT2           VDW2
 
-ENERGY:      20         0.0000         0.0000         0.0000         0.0000          -3261.8406       333.8893         0.0000         0.0000       570.3028          -2357.6486       317.2907     -2927.9514     -2356.6309       317.2907         -20436.7784       525.9117      9093.7916    -20436.7784       525.9117
+ENERGY:      20         0.0000         0.0000         0.0000         0.0000          -3261.8406       333.8893         0.0000         0.0000       570.3028          -2357.6486       317.2907     -2927.9514     -2356.6309       317.2907         -20436.7783       525.9118      9093.7916    -20436.7783       525.9118
 FEP:         20         0.0000     -3207.2012       324.7177
 
 WRITING EXTENDED SYSTEM TO OUTPUT FILE AT STEP 20
 WRITING COORDINATES TO OUTPUT FILE AT STEP 20
 COORDINATE DCD FILE test.dcd WAS NOT CREATED
-The last position output (seq=-2) takes 0.000 seconds, 785.996 MB of memory in use
+The last position output (seq=-2) takes 0.000 seconds, 785.988 MB of memory in use
 WRITING VELOCITIES TO OUTPUT FILE AT STEP 20
-The last velocity output (seq=-2) takes 0.000 seconds, 785.996 MB of memory in use
+The last velocity output (seq=-2) takes 0.000 seconds, 785.988 MB of memory in use
 ====================================================
 
-WallClock: 0.054570  CPUTime: 0.053064  Memory: 785.996094 MB
+WallClock: 0.049271  CPUTime: 0.047961  Memory: 785.988281 MB
 [Partition 0][Node 0] End of program
